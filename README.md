@@ -1,6 +1,6 @@
 # Introduction to Web Development Ebook
 
-This ebook was dedicated by Maxwell's (the owner of this repository) programming experience, using the **Ruby softcover gem** packed by [Micheal Hartl](http://www.michaelhartl.com), which is the author of [Ruby on Rails Tutorial](https://www.railstutorial.org).
+This ebook was dedicated by Maxwell's (the owner of this repository) programming experience, using the **Ruby softcover gem** with the edition.
 
 This book is written for whom wants to explore the world of web development and have little concept about this field.
 
