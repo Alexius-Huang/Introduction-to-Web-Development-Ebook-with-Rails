@@ -99,12 +99,93 @@ Example HTML document (Listing~\ref{code:html_formatting}) :
   <p>The <del>text</del> is being cross out! (Deleted or removed.)</p>
   
   <p>The <ins>text</ins> has an underline. (Inserted or added.)</p>
-  
+
 </body>
 ```
 \end{codelisting}
 
 (should contain an result image)
+
+
+### Create Links
+
+HTML links are very easy to add, using the ```<a>``` tag (called **anchor** tag) and specified hyper references will create the link, the syntax is :
+
+```html
+<a href="The hyper reference goes here!"> Link Name </a>
+```
+
+You may noticed that inside the tag, there we specified the link reference by ```href```, this is called HTML **attribute**, which can provide more information on the HTML tags.
+
+Create a link to the Ruby Softcover page will result as (Listing~\ref{code:html_link}) :
+
+\begin{codelisting}
+\codecaption{Example creating HTML link.}
+\label{code:html_link}
+```html
+<body>
+  <p>This is the link to <a href="https://www.softcover.io">Softcover</a> 
+   index page.</p>
+</body>
+```
+\end{codelisting}
+
+(should contain an result image)
+
+### Add Images
+
+HTML images are also simple to add, by using the ```<img>``` tag with the ```src``` and ```alt``` attribute. The attribute ```src``` stands for the word **source**, which means the source of the image file. The other attribute ```alt``` stands for the word **alternative**, which means when the browser somehow cannot find the source of the image (or maybe the image is missing in any reason), the image would display the content in the ```alt``` attribute. 
+
+The syntax will be represented as :
+
+```html
+<img src="Image source" alt="Alternative content when the image unable to load."/>
+```
+
+So what is the source of the image, one way is just specifiy its URL, for instance, to add the logo of the [Ruby Language](https://www.ruby-lang.org/en/), you can specify the URL of the logo and add short content of the icon in the ```alt``` attribute (Listing~\ref{code:html_image_1}) :
+
+\begin{codelisting}
+\codecaption{Example add image by specifying its URL.}
+\label{code:html_image_1}
+```html
+<body>
+  <img src="http://blogs.microsoft.co.il/blogs/shayf/WindowsLiveWriter/
+  GettingStartedWithDynamicLanguages_B665/ruby_logo_2.png" alt="The ruby icon">
+</body>
+```
+\end{codelisting}
+
+(should contain an result image)
+
+There is another way to add images, assume here is the folder where the "example.html" file and the image file "ruby_logo.png", they are stored (as in **should add figure**) , when the browser didn't expected to find image through the URL, it should find the image in the folder or the directory where the image was stored. In this example, the "example.html" should import the image as in Listing~\ref{code:html_image_2} :
+
+(should contain the directory image)
+
+\begin{codelisting}
+\codecaption{Example add image by specifying its URL.}
+\label{code:html_image_2}
+```html
+<body>
+  <img src="/images/ruby_logo.png" alt="The ruby icon">
+</body>
+```
+\end{codelisting}
+
+(should contain an result image)
+
+### Paragraphs and Quotes
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
