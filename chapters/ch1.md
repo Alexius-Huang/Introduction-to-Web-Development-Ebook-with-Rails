@@ -1,4 +1,4 @@
-# Brief Intro to \coloredtext{CornflowerBlue}{HTML} and \coloredtext{CornflowerBlue}{CSS}
+# Webpage Constructor : \coloredtext{CornflowerBlue}{HTML}
 \label{cha:ch1}
 
 Hello readers, welcome to the world of \coloredtext{CornflowerBlue}{Web Development!} When talking about web development, everything will be started from learning **HTML** and **CSS** syntax, which we can create **static webpages**. After that, you can use **JavaScript** with its library **jQuery** to create **dynamic webpages**, such as the *dropdown menu*, the *animation* and more!
@@ -55,6 +55,25 @@ By inspecting each lines, the following are the explainations of Listing~\ref{co
 \label{sec:section1_3}
 
 Knowing that HTML documents are composed by elements (or tags), we now introduce some useful tags you might use the most in the future :
+
+### Headers
+
+Headers are a sequence of tags from ```<h1>``` to ```<h6>```, the lower of the number, the larger of the size of the header text (Listing~\ref{code:html_headers}) :
+
+\begin{codelisting}
+\codecaption{Headers example.}
+\label{code:html_headers}
+```html
+<h1>This is the first header.</h1>
+<h2>This is the second header.</h2>
+<h3>This is the third header.</h3>
+<h4>This is the fourth header.</h4>
+<h5>This is the fifth header.</h5>
+<h6>This is the sixth header.</h6>
+```
+\end{codelisting}
+
+(should contain an result image)
 
 ### Formatting
 
@@ -142,6 +161,8 @@ The syntax will be represented as :
 <img src="Image source" alt="Alternative content when the image unable to load."/>
 ```
 
+(Notice that ```<img>``` tag appears not as a pair of tags, it should contain the slash sign followed by the right angle brackets!)
+
 So what is the source of the image, one way is just specifiy its URL, for instance, to add the logo of the [Ruby Language](https://www.ruby-lang.org/en/), you can specify the URL of the logo and add short content of the icon in the ```alt``` attribute (Listing~\ref{code:html_image_1}) :
 
 \begin{codelisting}
@@ -173,7 +194,142 @@ There is another way to add images, assume here is the folder where the "example
 
 (should contain an result image)
 
-### Paragraphs and Quotes
+### Paragraphs Format
+
+Here are more specifics on ```<p>``` tag, you first need to realize that it is not sure whether how HTML will be displayed visually. In order to emphasize this point, try adding more whitespaces or new lines for example (Listing~\ref{code:html_paragraph_format_1}) :
+
+\begin{codelisting}
+\codecaption{Example for paragraph format.}
+\label{code:html_paragraph_format_1}
+```html
+<h3>In Myself - Louisa May Alcott</h3>
+<p>
+  I do not ask for any crown
+  But that which all may win;
+
+  Nor try to conquer any world
+  Except the one within.
+
+  Be thou my guide until I find
+  Led by a tender hand,
+
+  The happy kingdom in myself
+  And dare to take command.
+</p>
+```
+\end{codelisting}
+
+(should contain an result image)
+
+It seems like the format didn't do us the favor, so, here we introduce another HTML element called **preformatted tag**, the ```<pre>``` tag. The text inside the ```<pre>``` element is displayed in a different font (Courier mostly), and it also preserves both spaces and line breaks (Listing~\ref{code:html_paragraph_format_2}) :
+
+\begin{codelisting}
+\codecaption{Example for paragraph format by using ```<pre>``` element.}
+\label{code:html_paragraph_format_2}
+```html
+<h3>In Myself - Louisa May Alcott</h3>
+<pre>
+  I do not ask for any crown
+  But that which all may win;
+
+  Nor try to conquer any world
+  Except the one within.
+
+  Be thou my guide until I find
+  Led by a tender hand,
+
+  The happy kingdom in myself
+  And dare to take command.
+</pre>
+```
+\end{codelisting}
+
+(should contain an result image)
+
+Other paragraphs formatting such as the ```<br>``` tag means **line break**, for example (Listing~\ref{code:html_paragraph_format_3}) :
+
+\begin{codelisting}
+\codecaption{Line break tag example.}
+\label{code:html_paragraph_format_3}
+```html
+<p>A paragraph with <br> a line break.</p>
+```
+\end{codelisting}
+
+(should contain an result image)
+
+The ```<hr>``` tag means **horizontal rule**, which defines a horizontal line, for example (Listing~\ref{code:html_paragraph_format_4}) :
+
+\begin{codelisting}
+\codecaption{Horizontal rule example.}
+\label{code:html_paragraph_format_4}
+```html
+<h1>This is the header.</h1>
+<hr>
+<p>This is the paragraph.</p>
+```
+\end{codelisting}
+
+(should contain an result image)
+
+### Quotes
+
+And now we are dealing **quotes**! First of all, to define short quotations, simply use the ```<q>``` tag as well, for example (Listing~\ref{code:html_quotes_1}) :
+
+\begin{codelisting}
+\codecaption{Short quotes example.}
+\label{code:html_quotes_1}
+```html
+<p>
+  Ruby is a language of careful balance. Its creator, Yukihiro “Matz” Matsumoto, 
+  (paragraph ommitted), he has often said that he is <q>trying to make Ruby natural, 
+  not simple,</q> in a way that mirrors life.
+  <br>
+  <small>Via <a href="https://www.ruby-lang.org/en/about/">Ruby Lang</a></small>
+</p>
+
+```
+\end{codelisting}
+
+(should contain an result image)
+
+The quotes nested the sentence "trying to make Ruby natural, not simple". (And that is true!)
+
+But how about long quotes? There HTML prepared another tag called ```<quoteblock>```, usually by using this tag, the browser will indent the content inside the tag, for example (Listing~\ref{code:html_quotes_2}) :
+
+\begin{codelisting}
+\codecaption{Large quotes example.}
+\label{code:html_quotes_2}
+```html
+<p>
+  Ruby was conceived on February 24, 1993. In a 1999 post to the ruby-talk mailing 
+  list, Ruby author Yukihiro Matsumoto describes some of his early ideas about the
+  language:
+  <quoteblock>
+    I was talking with my colleague about the possibility of an object-oriented
+    scripting language. I knew Perl (Perl4, not Perl5), but I didn't like it really, 
+    because it had the smell of a toy language (it still has). The object-oriented 
+    language seemed very promising. I knew Python then. But I didn't like it, 
+    because I didn't think it was a true object-oriented language — OO features 
+    appeared to be add-on to the language. As a language maniac and OO fan for 
+    15 years, I really wanted a genuine object-oriented, easy-to-use scripting 
+    language. I looked for but couldn't find one. So I decided to make it.
+  </quoteblock>
+  <br>
+  <small>Via <a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)">
+  Ruby Wiki</a></small>
+</p>
+
+```
+\end{codelisting}
+
+(should contain an result image)
+
+### Lists
+(Content for HTML lists)
+
+### Tables
+(Content for HTML tables)
 
 
 
