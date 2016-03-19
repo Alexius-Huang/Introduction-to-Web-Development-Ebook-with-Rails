@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <!DOCTYPE html>
+
+        <html xmlns="http://www.w3.org/1999/xhtml">
+        <head>
+          <title>Chapter 1</title>
+          <link rel="stylesheet" href="styles/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="styles/softcover.css" type="text/css" />
+          <link rel="stylesheet" href="styles/epub.css" type="text/css" />
+          <link rel="stylesheet" href="styles/custom.css" type="text/css"/>
+          <link rel="stylesheet" href="styles/custom_epub.css" type="text/css"/>
+          <link rel="stylesheet" type="application/vnd.adobe-page-template+xml" href="styles/page-template.xpgt" />
+        </head>
+
+        <body>
+          <div id="cha-ch1" class="chapter"><h1><a href="ch1_fragment.xhtml#cha-ch1" class="heading hyperref"><span class="number">Chapter 1 </span>Webpage Constructor : <span style="color: CornflowerBlue">HTML</span></a></h1>
+<p>Hello readers, welcome to the world of <span style="color: CornflowerBlue">Web Development!</span><span class="intersentencespace"></span> When talking about web development, everything will be started from learning <strong>HTML</strong> and <strong>CSS</strong> syntax, which we can create <strong>static webpages</strong>.<span class="intersentencespace"></span> After that, you can use <strong>JavaScript</strong> with its library <strong>jQuery</strong> to create <strong>dynamic webpages</strong>, such as the <em>dropdown menu</em>, the <em>animation</em> and more!</p>
+<div class="center figure" id="fig-captioned_image">
+<div class="graphics image"><img src="images/CH1/front-end.png" alt="images/CH1/front-end" /></div><div class="caption"><span class="header">Figure 1.1: </span><span class="description">HTML/CSS/JavaScript icons
+</span></div></div>
+<p>(Image by <a href="http://davidmles.com/blog/frontend-technologies/">http://davidmles.com/blog/frontend-technologies/</a>)</p>
+<p>Overall, these (HTML, CSS and JavaScript) are all associated with <strong><span style="color: CornflowerBlue">front-end</span></strong>, which are the <span style="color: CornflowerBlue">visable contents when you browsing webpages</span>.<span class="intersentencespace"></span> Nevermind of all these lind of terms in case you didn’t know, we will gradually dig into it and learn some useful techniques.</p>
+</div><div id="sec-section1_1" class="section"><h2><a href="ch1_fragment.xhtml#sec-section1_1" class="heading hyperref"><span class="number">1.1 </span>Brief Introduction to <span style="color: CornflowerBlue">HTML</span></a></h2>
+<p><strong><span style="color: CornflowerBlue">HTML</span></strong>, which stands for <a href="https://en.wikipedia.org/wiki/HTML">Hypertext Markup Language</a>, is a standard markup language to create the structure of web pages or web applications along with CSS and JavaScript.<span class="intersentencespace"></span> HTML is not a kind of programming language, but <em>browsers</em> (such as Internet Explorer, Chrome, Firefox, Safari, Opera…) can read HTML files and <strong>render</strong> the visible contents on the webpages.</p>
+</div><div id="sec-section1_2" class="section"><h2><a href="ch1_fragment.xhtml#sec-section1_2" class="heading hyperref"><span class="number">1.2 </span>HTML Syntax Overview</a></h2>
+<p>Well, let’s just start viewing the fundamentals of HTML, here is the basic structure of which the document should look like (<a href="ch1_fragment.xhtml#code-html_structure" class="hyperref">Listing <span class="ref">1.1</span></a>) :</p>
+<div class="codelisting" id="code-html_structure"><div class="heading"><span class="number">Listing 1.1:</span> <span class="description">Basic structure of HTML document.</span>
+
+
+</div>
+
+<div class="code"><div class="highlight"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="c">&lt;!-- The is the comment --&gt;</span>
+    <span class="nt">&lt;title&gt;</span>This is the title.<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+
+  <span class="nt">&lt;body&gt;</span>
+    <span class="c">&lt;!-- Visible contents was nested by the &lt;body&gt; tag --&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>This is the header.<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;p&gt;</span>This is the paragraph.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div></div></div><div class="center figure" id="fig-captioned_image">
+<div class="graphics image"><img src="images/CH1/Capture1-1.png" alt="images/CH1/Capture1-1" /></div><div class="caption"><span class="header">Figure 1.2: </span><span class="description">Result webpage
+</span></div></div>
+<p>Each line contains a pair or pairs of angle brackets, these are the basic <strong>HTML tags</strong> or <strong>elements</strong> of the HTML document.<span class="intersentencespace"></span> Notice that <em>most</em> of the HTML elements have starting tags and ending tags, and in order to specify the ending tag, you can see that it always contains a slash(/) sign, such as <code>&lt;html&gt;</code> and <code>&lt;/html&gt;</code>.<span class="intersentencespace"></span> (Not all of the HTML elements have both starting and ending tags.)</p>
+<p>By inspecting each lines, the following are the explainations of <a href="ch1_fragment.xhtml#code-html_structure" class="hyperref">Listing <span class="ref">1.1</span></a> :</p>
+<ul>
+<li><code>&lt;!DOCTYPE html&gt;</code> is a kind of <strong>declaration tag</strong>, this line specified that this is the HTML document.<span class="intersentencespace"></span>
+</li>
+<li><code>&lt;html&gt;</code> element describe the content of the HTML document, it should be a pair in the document.<span class="intersentencespace"></span>
+</li>
+<li><code>&lt;head&gt;</code> provides information of the document, such as the <a href="http://www.w3schools.com/html/html_charset.asp"><em>encode type</em></a> of the document, <a href="https://en.wikipedia.org/wiki/Meta_element"><em>metadata</em></a> or the included CSS/JS files, these details will appear as we process through the ebook.<span class="intersentencespace"></span>
+</li>
+<li><code>&lt;body&gt;</code> is the main tag contains or nesting visible contents of the document.<span class="intersentencespace"></span>
+</li>
+<li><code>&lt;h1&gt;</code> is <strong>header</strong> tag, defines the <strong>header</strong> of the content.<span class="intersentencespace"></span>
+</li>
+<li><code>&lt;p&gt;</code> is <strong>paragraph</strong> tag, defines the <strong>paragraph</strong>.<span class="intersentencespace"></span>
+</li>
+<li><code>&lt;!– comments here –&gt;</code> is <strong>comment</strong> tag, the content in this tag would not affect the content of the webpage.<span class="intersentencespace"></span>
+</li></ul>
+</div><div id="sec-section1_3" class="section"><h2><a href="ch1_fragment.xhtml#sec-section1_3" class="heading hyperref"><span class="number">1.3 </span>Common Used HTML Tags</a></h2>
+<p>Knowing that HTML documents are composed by elements (or tags), we now introduce some useful tags you might use the most in the future :</p>
+<div id="uid11" class="subsection"><h3><a href="ch1_fragment.xhtml#uid11" class="heading hyperref"><span class="number">1.3.1 </span>Headers</a></h3>
+<p>Headers are a sequence of tags from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>, the lower of the number, the larger of the size of the header text (<a href="ch1_fragment.xhtml#code-html_headers" class="hyperref">Listing <span class="ref">1.2</span></a>) :</p>
+<div class="codelisting" id="code-html_headers"><div class="heading"><span class="number">Listing 1.2:</span> <span class="description">Headers example.</span>
+
+
+</div>
+
+<div class="code"><div class="highlight"><pre><span class="nt">&lt;h1&gt;</span>This is the first header.<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h2&gt;</span>This is the second header.<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;h3&gt;</span>This is the third header.<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;h4&gt;</span>This is the fourth header.<span class="nt">&lt;/h4&gt;</span>
+<span class="nt">&lt;h5&gt;</span>This is the fifth header.<span class="nt">&lt;/h5&gt;</span>
+<span class="nt">&lt;h6&gt;</span>This is the sixth header.<span class="nt">&lt;/h6&gt;</span>
+</pre></div></div></div><div class="center figure" id="fig-captioned_image">
+<div class="graphics image"><img src="images/CH1/Capture1-2.png" alt="images/CH1/Capture1-2" /></div><div class="caption"><span class="header">Figure 1.3: </span><span class="description">Result webpage
+</span></div></div>
+</div>
+<div id="uid14" class="subsection"><h3><a href="ch1_fragment.xhtml#uid14" class="heading hyperref"><span class="number">1.3.2 </span>Formatting</a></h3>
+<ul>
+<li><code>&lt;b&gt;</code> and <code>&lt;strong&gt;</code> elements : Both of them defines <strong>bold</strong> text, but <code>&lt;strong&gt;</code> elements defines extra semantic “stronger” importance.<span class="intersentencespace"></span>
+</li>
+<li><code>&lt;i&gt;</code> and <code>&lt;em&gt;</code> elements : Both of them defines <em>italic</em> text, but <code>&lt;em&gt;</code> elements defines extra semantic “emphasized” importance.<span class="intersentencespace"></span>
+</li>
+<li><code>&lt;sub&gt;</code> and <code>&lt;sup&gt;</code> elements : <code>&lt;sub&gt;</code> tag defines a subscripted text where as <code>&lt;sup&gt;</code> tag defines superscripted text.<span class="intersentencespace"></span>
+</li>
+<li><code>&lt;small&gt;</code> element : Namely, defines the small text relative to the normal sized text.<span class="intersentencespace"></span>
+</li>
+<li><code>&lt;mark&gt;</code> element : <code>&lt;mark&gt;</code> tag defines the highlighted text by changing its background color of the text.<span class="intersentencespace"></span>
+</li>
+<li><code>&lt;del&gt;</code> and <code>&lt;ins&gt;</code> elements : <code>&lt;del&gt;</code> tag defines <em>deleted</em> (removed) text, which with a line crossed directly to the text.<span class="intersentencespace"></span> <code>&lt;ins&gt;</code> tag defines <em>inserted</em> (added) text, which with a line appended below the text.<span class="intersentencespace"></span>
+</li></ul>
+<p>Example HTML document (<a href="ch1_fragment.xhtml#code-html_formatting" class="hyperref">Listing <span class="ref">1.3</span></a>) :</p>
+<div class="codelisting" id="code-html_formatting"><div class="heading"><span class="number">Listing 1.3:</span> <span class="description">Example HTML formatting.</span>
+
+
+</div>
+
+<div class="code"><div class="highlight"><pre><span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>Example<span class="nt">&lt;/h1&gt;</span>
+  
+  <span class="nt">&lt;p&gt;</span>This is the <span class="nt">&lt;b&gt;</span>bolded text<span class="nt">&lt;/b&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span>This is also <span class="nt">&lt;strong&gt;</span>bolded text<span class="nt">&lt;/strong&gt;</span> but semantically "strong".<span class="nt">&lt;/p&gt;</span>
+  
+  <span class="nt">&lt;p&gt;</span>This is the <span class="nt">&lt;i&gt;</span>italic text<span class="nt">&lt;/i&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span>This is the <span class="nt">&lt;em&gt;</span>italic text<span class="nt">&lt;/em&gt;</span> but semantically being "emphasized".<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;p&gt;</span>This is the <span class="nt">&lt;sub&gt;</span>subscripted text<span class="nt">&lt;/sub&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span>You can represent water in Chemistry as H<span class="nt">&lt;sub&gt;</span>2<span class="nt">&lt;/sub&gt;</span>O.<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;p&gt;</span>This is the <span class="nt">&lt;sup&gt;</span>superscripted text<span class="nt">&lt;/sup&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span>You can represent tempearature as 25<span class="nt">&lt;sup&gt;</span>o<span class="nt">&lt;/sup&gt;</span>C.<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;p&gt;</span>The <span class="nt">&lt;small&gt;</span>text<span class="nt">&lt;/small&gt;</span> looks smaller than the normal size.<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;p&gt;</span>The <span class="nt">&lt;mark&gt;</span>text<span class="nt">&lt;/mark&gt;</span> is being marked.<span class="nt">&lt;/p&gt;</span>
+  
+  <span class="nt">&lt;p&gt;</span>The <span class="nt">&lt;del&gt;</span>text<span class="nt">&lt;/del&gt;</span> is being cross out! (Deleted or removed.)<span class="nt">&lt;/p&gt;</span>
+  
+  <span class="nt">&lt;p&gt;</span>The <span class="nt">&lt;ins&gt;</span>text<span class="nt">&lt;/ins&gt;</span> has an underline. (Inserted or added.)<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+</pre></div></div></div><div class="center figure" id="fig-captioned_image">
+<div class="graphics image"><img src="images/CH1/Capture1-3.png" alt="images/CH1/Capture1-3" /></div><div class="caption"><span class="header">Figure 1.4: </span><span class="description">Result webpage
+</span></div></div>
+</div>
+<div id="uid23" class="subsection"><h3><a href="ch1_fragment.xhtml#uid23" class="heading hyperref"><span class="number">1.3.3 </span>Create Links</a></h3>
+<p>HTML links are very easy to add, using the <code>&lt;a&gt;</code> tag (called <strong>anchor</strong> tag) and specified hyper references will create the link, the syntax is :</p>
+<div class="code"><div class="highlight"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"The hyper reference goes here!"</span><span class="nt">&gt;</span> Link Name <span class="nt">&lt;/a&gt;</span>
+</pre></div></div>
+<p>You may noticed that inside the tag, there we specified the link reference by <code>href</code>, this is called HTML <strong>attribute</strong>, which can provide more information on the HTML tags.</p>
+<p>Create a link to the Ruby Softcover page will result as (<a href="ch1_fragment.xhtml#code-html_link" class="hyperref">Listing <span class="ref">1.4</span></a>) :</p>
+<div class="codelisting" id="code-html_link"><div class="heading"><span class="number">Listing 1.4:</span> <span class="description">Example creating HTML link.</span>
+
+
+</div>
+
+<div class="code"><div class="highlight"><pre><span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;p&gt;</span>This is the link to <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.softcover.io"</span><span class="nt">&gt;</span>Softcover<span class="nt">&lt;/a&gt;</span> 
+   index page.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</pre></div></div></div><div class="center figure" id="fig-captioned_image">
+<div class="graphics image"><img src="images/CH1/Capture1-4.png" alt="images/CH1/Capture1-4" /></div><div class="caption"><span class="header">Figure 1.5: </span><span class="description">Result webpage
+</span></div></div>
+</div>
+<div id="uid26" class="subsection"><h3><a href="ch1_fragment.xhtml#uid26" class="heading hyperref"><span class="number">1.3.4 </span>Add Images</a></h3>
+<p>HTML images are also simple to add, by using the <code>&lt;img&gt;</code> tag with the <code>src</code> and <code>alt</code> attribute.<span class="intersentencespace"></span> The attribute <code>src</code> stands for the word <strong>source</strong>, which means the source of the image file.<span class="intersentencespace"></span> The other attribute <code>alt</code> stands for the word <strong>alternative</strong>, which means when the browser somehow cannot find the source of the image (or maybe the image is missing in any reason), the image would display the content in the <code>alt</code> attribute.</p>
+<p>The syntax will be represented as :</p>
+<div class="code"><div class="highlight"><pre><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"Image source"</span> <span class="na">alt=</span><span class="s">"Alternative content when the image unable to load."</span><span class="nt">/&gt;</span>
+</pre></div></div>
+<p>(Notice that <code>&lt;img&gt;</code> tag appears not as a pair of tags, it should contain the slash sign followed by the right angle brackets!)</p>
+<p>So what is the source of the image, one way is just specifiy its URL, for instance, to add the logo of the <a href="https://www.ruby-lang.org/en/">Ruby Language</a>, you can specify the URL of the logo and add short content of the icon in the <code>alt</code> attribute (<a href="ch1_fragment.xhtml#code-html_image_1" class="hyperref">Listing <span class="ref">1.5</span></a>) :</p>
+<div class="codelisting" id="code-html_image_1"><div class="heading"><span class="number">Listing 1.5:</span> <span class="description">Example add image by specifying its URL.</span>
+
+
+</div>
+
+<div class="code"><div class="highlight"><pre><span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://engineering.yp.com/img/ruby-logo.png"</span> <span class="na">alt=</span><span class="s">"The ruby logo"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</pre></div></div></div><div class="center figure" id="fig-captioned_image">
+<div class="graphics image"><img src="images/CH1/Capture1-5.png" alt="images/CH1/Capture1-5" /></div><div class="caption"><span class="header">Figure 1.6: </span><span class="description">Result webpage
+</span></div></div>
+<p>(You may want to know how to resize images, this will be introduced in the next chapter.)</p>
+<p>There is another way to add images, assume here is the folder where the “example.html” file and the image file “ruby-logo.png”, they are stored (as in <strong>should add figure</strong>) , when the browser didn’t expected to find image through the URL, it should find the image in the folder or the directory where the image was stored.<span class="intersentencespace"></span> In this example, the “example.html” should import the image as in <a href="ch1_fragment.xhtml#code-html_image_2" class="hyperref">Listing <span class="ref">1.6</span></a> :</p>
+<div class="center figure" id="fig-captioned_image">
+<div class="graphics image"><img src="images/CH1/ExampleDirectory.png" alt="images/CH1/ExampleDirectory" /></div><div class="caption"><span class="header">Figure 1.7: </span><span class="description">Example directory
+</span></div></div>
+<div class="codelisting" id="code-html_image_2"><div class="heading"><span class="number">Listing 1.6:</span> <span class="description">Example add image by specifying its URL.</span>
+
+
+</div>
+
+<div class="code"><div class="highlight"><pre><span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"./Images/ruby-logo.png"</span> <span class="na">alt=</span><span class="s">"The ruby icon"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</pre></div></div></div><div class="center figure" id="fig-captioned_image">
+<div class="graphics image"><img src="images/CH1/Capture1-6.png" alt="images/CH1/Capture1-6" /></div><div class="caption"><span class="header">Figure 1.8: </span><span class="description">Result webpage
+</span></div></div>
+<p>Notice that the source follows the path from the current directory (a dot), to the “Images” folder, and to the image file.</p>
+</div>
+<div id="uid32" class="subsection"><h3><a href="ch1_fragment.xhtml#uid32" class="heading hyperref"><span class="number">1.3.5 </span>Paragraphs Format</a></h3>
+<p>Here are more specifics on <code>&lt;p&gt;</code> tag, you first need to realize that it is not sure whether how HTML will be displayed visually.<span class="intersentencespace"></span> In order to emphasize this point, try adding more whitespaces or new lines for example (<a href="ch1_fragment.xhtml#code-html_paragraph_format_1" class="hyperref">Listing <span class="ref">1.7</span></a>) :</p>
+<div class="codelisting" id="code-html_paragraph_format_1"><div class="heading"><span class="number">Listing 1.7:</span> <span class="description">Example for paragraph format.</span>
+
+
+</div>
+
+<div class="code"><div class="highlight"><pre><span class="nt">&lt;h3&gt;</span>In Myself - Louisa May Alcott<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+  I do not ask for any crown
+  But that which all may win;
+
+  Nor try to conquer any world
+  Except the one within.
+
+  Be thou my guide until I find
+  Led by a tender hand,
+
+  The happy kingdom in myself
+  And dare to take command.
+<span class="nt">&lt;/p&gt;</span>
+</pre></div></div></div><div class="center figure" id="fig-captioned_image">
+<div class="graphics image"><img src="images/CH1/Capture1-7.png" alt="images/CH1/Capture1-7" /></div><div class="caption"><span class="header">Figure 1.9: </span><span class="description">Result webpage
+</span></div></div>
+<p>It seems like the format didn’t do us the favor, so, here we introduce another HTML element called <strong>preformatted tag</strong>, the <code>&lt;pre&gt;</code> tag.<span class="intersentencespace"></span> The text inside the <code>&lt;pre&gt;</code> element is displayed in a different font (Courier mostly), and it also preserves both spaces and line breaks (<a href="ch1_fragment.xhtml#code-html_paragraph_format_2" class="hyperref">Listing <span class="ref">1.8</span></a>) :</p>
+<div class="codelisting" id="code-html_paragraph_format_2"><div class="heading"><span class="number">Listing 1.8:</span> <span class="description">Example for paragraph format by using “‘&lt;pre&gt;“‘ element.</span>
+
+
+</div>
+
+<div class="code"><div class="highlight"><pre><span class="nt">&lt;h3&gt;</span>In Myself - Louisa May Alcott<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;pre&gt;</span>
+  I do not ask for any crown
+  But that which all may win;
+
+  Nor try to conquer any world
+  Except the one within.
+
+  Be thou my guide until I find
+  Led by a tender hand,
+
+  The happy kingdom in myself
+  And dare to take command.
+<span class="nt">&lt;/pre&gt;</span>
+</pre></div></div></div><div class="center figure" id="fig-captioned_image">
+<div class="graphics image"><img src="images/CH1/Capture1-8.png" alt="images/CH1/Capture1-8" /></div><div class="caption"><span class="header">Figure 1.10: </span><span class="description">Result webpage
+</span></div></div>
+<p>Other paragraphs formatting such as the <code>&lt;br&gt;</code> tag means <strong>line break</strong>, for example (<a href="ch1_fragment.xhtml#code-html_paragraph_format_3" class="hyperref">Listing <span class="ref">1.9</span></a>) :</p>
+<div class="codelisting" id="code-html_paragraph_format_3"><div class="heading"><span class="number">Listing 1.9:</span> <span class="description">Line break tag example.</span>
+
+
+</div>
+
+<div class="code"><div class="highlight"><pre><span class="nt">&lt;p&gt;</span>A paragraph with <span class="nt">&lt;br&gt;</span> a line break.<span class="nt">&lt;/p&gt;</span>
+</pre></div></div></div><div class="center figure" id="fig-captioned_image">
+<div class="graphics image"><img src="images/CH1/Capture1-9.png" alt="images/CH1/Capture1-9" /></div><div class="caption"><span class="header">Figure 1.11: </span><span class="description">Result webpage
+</span></div></div>
+<p>The <code>&lt;hr&gt;</code> tag means <strong>horizontal rule</strong>, which defines a horizontal line, for example (<a href="ch1_fragment.xhtml#code-html_paragraph_format_4" class="hyperref">Listing <span class="ref">1.10</span></a>) :</p>
+<div class="codelisting" id="code-html_paragraph_format_4"><div class="heading"><span class="number">Listing 1.10:</span> <span class="description">Horizontal rule example.</span>
+
+
+</div>
+
+<div class="code"><div class="highlight"><pre><span class="nt">&lt;h1&gt;</span>This is the header.<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;hr&gt;</span>
+<span class="nt">&lt;p&gt;</span>This is the paragraph.<span class="nt">&lt;/p&gt;</span>
+</pre></div></div></div><div class="center figure" id="fig-captioned_image">
+<div class="graphics image"><img src="images/CH1/Capture1-10.png" alt="images/CH1/Capture1-10" /></div><div class="caption"><span class="header">Figure 1.12: </span><span class="description">Result webpage
+</span></div></div>
+</div>
+<div id="uid41" class="subsection"><h3><a href="ch1_fragment.xhtml#uid41" class="heading hyperref"><span class="number">1.3.6 </span>Quotes</a></h3>
+<p>And now we are dealing <strong>quotes</strong>!<span class="intersentencespace"></span> First of all, to define short quotations, simply use the <code>&lt;q&gt;</code> tag as well, for example (<a href="ch1_fragment.xhtml#code-html_quotes_1" class="hyperref">Listing <span class="ref">1.11</span></a>) :</p>
+<div class="codelisting" id="code-html_quotes_1"><div class="heading"><span class="number">Listing 1.11:</span> <span class="description">Short quotes example.</span>
+
+
+</div>
+
+<div class="code"><div class="highlight"><pre><span class="nt">&lt;p&gt;</span>
+  Ruby is a language of careful balance. Its creator, Yukihiro “Matz” Matsumoto, 
+  (paragraph ommitted), he has often said that he is <span class="nt">&lt;q&gt;</span>trying to make Ruby natural, 
+  not simple,<span class="nt">&lt;/q&gt;</span> in a way that mirrors life.
+  <span class="nt">&lt;br&gt;</span>
+  <span class="nt">&lt;small&gt;</span>Via <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.ruby-lang.org/en/about/"</span><span class="nt">&gt;</span>Ruby Lang<span class="nt">&lt;/a&gt;&lt;/small&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+</pre></div></div></div><div class="center figure" id="fig-captioned_image">
+<div class="graphics image"><img src="images/CH1/Capture1-11.png" alt="images/CH1/Capture1-11" /></div><div class="caption"><span class="header">Figure 1.13: </span><span class="description">Result webpage
+</span></div></div>
+<p>The quotes nested the sentence “trying to make Ruby natural, not simple”.<span class="intersentencespace"></span> (And that is true!)</p>
+<p>But how about long quotes?<span class="intersentencespace"></span> There HTML prepared another tag called <code>&lt;blockquote&gt;</code>, usually by using this tag, the browser will indent the content inside the tag, for example (<a href="ch1_fragment.xhtml#code-html_quotes_2" class="hyperref">Listing <span class="ref">1.12</span></a>) :</p>
+<div class="codelisting" id="code-html_quotes_2"><div class="heading"><span class="number">Listing 1.12:</span> <span class="description">Large quotes example.</span>
+
+
+</div>
+
+<div class="code"><div class="highlight"><pre><span class="nt">&lt;p&gt;</span>
+  Ruby was conceived on February 24, 1993. In a 1999 post to the ruby-talk mailing 
+  list, Ruby author Yukihiro Matsumoto describes some of his early ideas about the
+  language:
+  <span class="nt">&lt;blockquote&gt;</span>
+    I was talking with my colleague about the possibility of an object-oriented
+    scripting language. I knew Perl (Perl4, not Perl5), but I didn't like it really, 
+    because it had the smell of a toy language (it still has). The object-oriented 
+    language seemed very promising. I knew Python then. But I didn't like it, 
+    because I didn't think it was a true object-oriented language — OO features 
+    appeared to be add-on to the language. As a language maniac and OO fan for 
+    15 years, I really wanted a genuine object-oriented, easy-to-use scripting 
+    language. I looked for but couldn't find one. So I decided to make it.
+  <span class="nt">&lt;/blockquote&gt;</span>
+  <span class="nt">&lt;br&gt;</span>
+  <span class="nt">&lt;small&gt;</span>Via <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/Ruby_(programming_language)"</span><span class="nt">&gt;</span>
+  Ruby Wiki<span class="nt">&lt;/a&gt;&lt;/small&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+</pre></div></div></div><div class="center figure" id="fig-captioned_image">
+<div class="graphics image"><img src="images/CH1/Capture1-12.png" alt="images/CH1/Capture1-12" /></div><div class="caption"><span class="header">Figure 1.14: </span><span class="description">Result webpage
+</span></div></div>
+</div>
+<div id="uid46" class="subsection"><h3><a href="ch1_fragment.xhtml#uid46" class="heading hyperref"><span class="number">1.3.7 </span>Lists</a></h3>
+<p>There are two types of HTML lists, first is the unordered list, which use the tag <code>&lt;ul&gt;</code> to represent, each of the list item is nested by <code>&lt;li&gt;</code>, for example (<a href="ch1_fragment.xhtml#code-html_list_1" class="hyperref">Listing <span class="ref">1.13</span></a>) :</p>
+<div class="codelisting" id="code-html_list_1"><div class="heading"><span class="number">Listing 1.13:</span> <span class="description">Unordered list example.</span>
+
+
+</div>
+
+<div class="code"><div class="highlight"><pre><span class="nt">&lt;h2&gt;</span>Computer Languages :<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;</span>C++<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Java<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>C#<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Python<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Ruby<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div></div></div><div class="center figure" id="fig-captioned_image">
+<div class="graphics image"><img src="images/CH1/Capture1-13.png" alt="images/CH1/Capture1-13" /></div><div class="caption"><span class="header">Figure 1.15: </span><span class="description">Result webpage
+</span></div></div>
+<p>Another type of list is the ordered list, which use the tag <code>&lt;ol&gt;</code> to represent, and each of the list item is also nested by <code>&lt;li&gt;</code> element, for example (<a href="ch1_fragment.xhtml#code-html_quotes_2" class="hyperref">Listing <span class="ref">1.12</span></a>) :</p>
+<div class="codelisting" id="code-html_quotes_2"><div class="heading"><span class="number">Listing 1.14:</span> <span class="description">Large quotes example.</span>
+
+
+</div>
+
+<div class="code"><div class="highlight"><pre><span class="nt">&lt;h2&gt;</span>Steps to learn Web Development :<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;ol&gt;</span>
+  <span class="nt">&lt;li&gt;</span>HTML<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>CSS<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>JavaScript<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>PHP, SQL/ Ruby on Rails/ other Web Framework<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span>
+</pre></div></div></div><div class="center figure" id="fig-captioned_image">
+<div class="graphics image"><img src="images/CH1/Capture1-14.png" alt="images/CH1/Capture1-14" /></div><div class="caption"><span class="header">Figure 1.16: </span><span class="description">Result webpage
+</span></div></div>
+</div>
+<div id="uid51" class="subsection"><h3><a href="ch1_fragment.xhtml#uid51" class="heading hyperref"><span class="number">1.3.8 </span>Tables</a></h3>
+<p>Tables are also important format that describes the data or make the contents look well, every thing associated with the table should (obviously) nested by the <code>&lt;table&gt;</code> element.</p>
+<div class="code"><div class="highlight"><pre><span class="nt">&lt;table&gt;</span>
+  <span class="c">&lt;!-- Table content goes here --&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+</pre></div></div>
+<p>By inspecting the structure of the table, table are the composed by table rows, which can be represented by the <code>&lt;tr&gt;</code> tag, lets say having three rows :</p>
+<div class="code"><div class="highlight"><pre><span class="nt">&lt;table&gt;</span>
+  <span class="nt">&lt;tr&gt;</span> <span class="c">&lt;!-- Row 1 --&gt;</span> <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span> <span class="c">&lt;!-- Row 2 --&gt;</span> <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span> <span class="c">&lt;!-- Row 3 --&gt;</span> <span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+</pre></div></div>
+<p>Now each table row can divided by several table data with the <code>&lt;th&gt;</code> or <code>&lt;td&gt;</code> element, <code>&lt;th&gt;</code> represents the table header whereas <code>&lt;td&gt;</code> represents the table data.<span class="intersentencespace"></span> Now we can construct a simple table, for instance (<a href="ch1_fragment.xhtml#code-html_table_1" class="hyperref">Listing <span class="ref">1.15</span></a>) :</p>
+<div class="codelisting" id="code-html_table_1"><div class="heading"><span class="number">Listing 1.15:</span> <span class="description">HTML table example.</span>
+
+
+</div>
+
+<div class="code"><div class="highlight"><pre><span class="nt">&lt;table&gt;</span>
+  <span class="nt">&lt;tr&gt;</span> <span class="nt">&lt;th&gt;</span>Name<span class="nt">&lt;/th&gt;</span>  <span class="nt">&lt;th&gt;</span>Age<span class="nt">&lt;/th&gt;</span> <span class="nt">&lt;th&gt;</span>Interest<span class="nt">&lt;/th&gt;</span> <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span> <span class="nt">&lt;td&gt;</span>Max<span class="nt">&lt;/td&gt;</span>   <span class="nt">&lt;td&gt;</span>20<span class="nt">&lt;/td&gt;</span>  <span class="nt">&lt;td&gt;</span>Drawing<span class="nt">&lt;/td&gt;</span>  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span> <span class="nt">&lt;td&gt;</span>Allen<span class="nt">&lt;/td&gt;</span> <span class="nt">&lt;td&gt;</span>18<span class="nt">&lt;/td&gt;</span>  <span class="nt">&lt;td&gt;</span>Reading<span class="nt">&lt;/td&gt;</span>  <span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+</pre></div></div></div><div class="center figure" id="fig-captioned_image">
+<div class="graphics image"><img src="images/CH1/Capture1-15.png" alt="images/CH1/Capture1-15" /></div><div class="caption"><span class="header">Figure 1.17: </span><span class="description">Result webpage
+</span></div></div>
+<p>Some table even have the main table caption on it, lets specify the caption of the table by using the element <code>&lt;caption&gt;</code> right after the first <code>&lt;table&gt;</code> element (<a href="ch1_fragment.xhtml#code-html_table_2" class="hyperref">Listing <span class="ref">1.16</span></a>) :</p>
+<div class="codelisting" id="code-html_table_2"><div class="heading"><span class="number">Listing 1.16:</span> <span class="description">HTML table with a caption example.</span>
+
+
+</div>
+
+<div class="code"><div class="highlight"><pre><span class="nt">&lt;table&gt;</span>
+  <span class="nt">&lt;caption&gt;</span>Info of the Students<span class="nt">&lt;/caption&gt;</span>
+  <span class="nt">&lt;tr&gt;</span> <span class="nt">&lt;th&gt;</span>Name<span class="nt">&lt;/th&gt;</span>  <span class="nt">&lt;th&gt;</span>Age<span class="nt">&lt;/th&gt;</span> <span class="nt">&lt;th&gt;</span>Interest<span class="nt">&lt;/th&gt;</span> <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span> <span class="nt">&lt;td&gt;</span>Max<span class="nt">&lt;/td&gt;</span>   <span class="nt">&lt;td&gt;</span>20<span class="nt">&lt;/td&gt;</span>  <span class="nt">&lt;td&gt;</span>Drawing<span class="nt">&lt;/td&gt;</span>  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span> <span class="nt">&lt;td&gt;</span>Allen<span class="nt">&lt;/td&gt;</span> <span class="nt">&lt;td&gt;</span>18<span class="nt">&lt;/td&gt;</span>  <span class="nt">&lt;td&gt;</span>Reading<span class="nt">&lt;/td&gt;</span>  <span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+</pre></div></div></div><div class="center figure" id="fig-captioned_image">
+<div class="graphics image"><img src="images/CH1/Capture1-16.png" alt="images/CH1/Capture1-16" /></div><div class="caption"><span class="header">Figure 1.18: </span><span class="description">Result webpage
+</span></div></div>
+<p>Sometime you can span more data cells into one row or one column, try spanning multiple rows in one column by using the <code>rowspan</code> attribute, for instance (<a href="ch1_fragment.xhtml#code-html_table_3" class="hyperref">Listing <span class="ref">1.17</span></a>) :</p>
+<div class="codelisting" id="code-html_table_3"><div class="heading"><span class="number">Listing 1.17:</span> <span class="description">HTML table rowspan example.</span>
+
+
+</div>
+
+<div class="code"><div class="highlight"><pre><span class="nt">&lt;table&gt;</span>
+  <span class="nt">&lt;tr&gt;</span> <span class="nt">&lt;th&gt;</span>Name<span class="nt">&lt;/th&gt;</span>              <span class="nt">&lt;td&gt;</span>Max<span class="nt">&lt;/td&gt;</span>                  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span> <span class="nt">&lt;td</span> <span class="na">rowspan=</span><span class="s">"2"</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/td&gt;</span> <span class="nt">&lt;td&gt;</span>example@gmail.com<span class="nt">&lt;/td&gt;</span>    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>                            <span class="nt">&lt;td&gt;</span>example@yahoo.com.tw<span class="nt">&lt;/td&gt;</span> <span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+</pre></div></div></div><div class="center figure" id="fig-captioned_image">
+<div class="graphics image"><img src="images/CH1/Capture1-17.png" alt="images/CH1/Capture1-17" /></div><div class="caption"><span class="header">Figure 1.19: </span><span class="description">Result webpage
+</span></div></div>
+<p>Or, by using the <code>colspan</code> attrbuts to span multiple columns into one column (<a href="ch1_fragment.xhtml#code-html_table_4" class="hyperref">Listing <span class="ref">1.18</span></a>) :</p>
+<div class="codelisting" id="code-html_table_4"><div class="heading"><span class="number">Listing 1.18:</span> <span class="description">HTML table colspan example.</span>
+
+
+</div>
+
+<div class="code"><div class="highlight"><pre><span class="nt">&lt;table&gt;</span>
+  <span class="nt">&lt;tr&gt;</span> <span class="nt">&lt;th&gt;</span>Name<span class="nt">&lt;/th&gt;</span> <span class="nt">&lt;th</span> <span class="na">colspan=</span><span class="s">"2"</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/th&gt;</span>                                <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span> <span class="nt">&lt;td&gt;</span>Max<span class="nt">&lt;/td&gt;</span>  <span class="nt">&lt;td&gt;</span>example@gmail.com<span class="nt">&lt;/td&gt;</span>  <span class="nt">&lt;td&gt;</span>example@yahoo.com.tw<span class="nt">&lt;/td&gt;</span> <span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+</pre></div></div></div><div class="center figure" id="fig-captioned_image">
+<div class="graphics image"><img src="images/CH1/Capture1-18.png" alt="images/CH1/Capture1-18" /></div><div class="caption"><span class="header">Figure 1.20: </span><span class="description">Result webpage
+</span></div></div>
+</div></div><div id="sec-section1_4" class="section"><h2><a href="ch1_fragment.xhtml#sec-section1_4" class="heading hyperref"><span class="number">1.4 </span>Summery</a></h2>
+<p>Here is the list of the tags and elements we’ve walkthrough :</p>
+<table class="tabular"><tr class="top_border"><td class="left_border align_left right_border"><strong>HTML Tag</strong></td>
+<td class="align_left right_border"><strong>Name</strong></td>
+<td class="align_left right_border"><strong>Description</strong></td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;!DOCTYPE&gt;</code></td>
+<td class="align_left right_border">Declaration tag</td>
+<td class="align_left right_border">Declare the document type</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;html&gt;</code></td>
+<td class="align_left right_border">HTML tag</td>
+<td class="align_left right_border">Defines the HTML document</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;head&gt;</code></td>
+<td class="align_left right_border">Head tag</td>
+<td class="align_left right_border">Provides more information of the HTML document</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;body&gt;</code></td>
+<td class="align_left right_border">Body tag</td>
+<td class="align_left right_border">Provides visible webpage contents</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;h1&gt;</code> <span class="inline_math">\( \sim  \)</span> <code>&lt;h6&gt;</code></td>
+<td class="align_left right_border">Header tags</td>
+<td class="align_left right_border">Defines the header of the document</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;!– –&gt;</code></td>
+<td class="align_left right_border">Comment tag</td>
+<td class="align_left right_border">Explanation of the document</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;p&gt;</code></td>
+<td class="align_left right_border">Paragraph tag</td>
+<td class="align_left right_border">Describes the HTML paragraph</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;b&gt;</code></td>
+<td class="align_left right_border">Bold tag</td>
+<td class="align_left right_border">Display bolded text</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;strong&gt;</code></td>
+<td class="align_left right_border">Strong tag</td>
+<td class="align_left right_border">Display bolded text semantically <strong>strong</strong></td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;i&gt;</code></td>
+<td class="align_left right_border">Italic tag</td>
+<td class="align_left right_border">Display the italic text</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;em&gt;</code></td>
+<td class="align_left right_border">Emphsizing tag</td>
+<td class="align_left right_border">Display the italic text semantically <em>emphasized</em></td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;sub&gt;</code></td>
+<td class="align_left right_border">Subscript tag</td>
+<td class="align_left right_border">Display the subscripted text</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;sup&gt;</code></td>
+<td class="align_left right_border">Superscript tag</td>
+<td class="align_left right_border">Display the superscripted text</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;small&gt;</code></td>
+<td class="align_left right_border">Small tag</td>
+<td class="align_left right_border">Display relatively small text</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;mark&gt;</code></td>
+<td class="align_left right_border">Mark tag</td>
+<td class="align_left right_border">Display the marked text</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;del&gt;</code></td>
+<td class="align_left right_border">Delete tag</td>
+<td class="align_left right_border">Display the deleted text</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;ins&gt;</code></td>
+<td class="align_left right_border">Insert tag</td>
+<td class="align_left right_border">Display the inserted text</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;a&gt;</code></td>
+<td class="align_left right_border">Anchor tag</td>
+<td class="align_left right_border">Create an hyper referenced link</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;img&gt;</code></td>
+<td class="align_left right_border">Image tag</td>
+<td class="align_left right_border">Add images in the HTML document</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;pre&gt;</code></td>
+<td class="align_left right_border">Preformatted tag</td>
+<td class="align_left right_border">Display paragraphs which preserves both whitespaces and line breaks</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;br&gt;</code></td>
+<td class="align_left right_border">Break tag</td>
+<td class="align_left right_border">Defines new line in HTML document</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;hr&gt;</code></td>
+<td class="align_left right_border">Horizontal rule tag</td>
+<td class="align_left right_border">Defines an horizontal line which can separate contents in HTML document</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;q&gt;</code></td>
+<td class="align_left right_border">Quote tag</td>
+<td class="align_left right_border">Defines short quotation</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;blockquote&gt;</code></td>
+<td class="align_left right_border">blockquote tag</td>
+<td class="align_left right_border">Defines large quotation</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;ul&gt;</code></td>
+<td class="align_left right_border">Unordered list tag</td>
+<td class="align_left right_border">Defines an unordered list</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;ol&gt;</code></td>
+<td class="align_left right_border">Ordered list tag</td>
+<td class="align_left right_border">Defines an ordered list</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;li&gt;</code></td>
+<td class="align_left right_border">List item tag</td>
+<td class="align_left right_border">Defines a list item</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;table&gt;</code></td>
+<td class="align_left right_border">Table tag</td>
+<td class="align_left right_border">Specified the table content in HTML document</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;tr&gt;</code></td>
+<td class="align_left right_border">Table row tag</td>
+<td class="align_left right_border">Defines a row in the HTML table content</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;th&gt;</code></td>
+<td class="align_left right_border">Table header tag</td>
+<td class="align_left right_border">Defines a table header cell in the HTML table row content</td>
+</tr><tr><td class="left_border align_left right_border"><code>&lt;td&gt;</code></td>
+<td class="align_left right_border">Table data tag</td>
+<td class="align_left right_border">Defines a table data cell in the HTML table row content</td>
+</tr><tr class="bottom_border"><td class="left_border align_left right_border"><code>&lt;caption&gt;</code></td>
+<td class="align_left right_border">Table caption tag</td>
+<td class="align_left right_border">Defines the caption of the HTML table</td>
+</tr></table>
+<p>We covered most common used HTML elements in this book, however we havn’t introduce some other important HTML tags or elements such as <code>&lt;div&gt;</code> or <code>&lt;form&gt;</code> tags, but nevermind, these will appear as we processs into the later chapters, all we recommend you to do is to familierize how to use the common HTML tags in order to prepare for <a href="ch3_fragment.xhtml#cha-ch3" class="hyperref">Chapter <span class="ref">3</span></a>.</p>
+<p>And we also congratulate that you known the basic structure of the HTML elments and we are gonna proceed to learn how to style our HTML tags by using <strong><span style="color: LightGreen">CSS</span></strong>!</p>
+<p>For more informations of the HTML elements, you can search the <a href="http://www.w3schools.com/html/default.asp">W3School website</a> : http://www.w3schools.com/html/default.asp</p>
+</div>
+        </body>
+        </html>

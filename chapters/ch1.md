@@ -14,7 +14,7 @@ Overall, these (HTML, CSS and JavaScript) are all associated with **\coloredtext
 
 **\coloredtext{CornflowerBlue}{HTML}**, which stands for [Hypertext Markup Language](https://en.wikipedia.org/wiki/HTML), is a standard markup language to create the structure of web pages or web applications along with CSS and JavaScript. HTML is not a kind of programming language, but *browsers* (such as Internet Explorer, Chrome, Firefox, Safari, Opera...) can read HTML files and **render** the visible contents on the webpages.
 
-## HTML Syntax Overview
+## \coloredtext{CornflowerBlue}{HTML} Syntax Overview
 \label{sec:section1_2}
 
 Well, let's just start viewing the fundamentals of HTML, here is the basic structure of which the document should look like (Listing~\ref{code:html_structure}) :
@@ -53,7 +53,7 @@ By inspecting each lines, the following are the explainations of Listing~\ref{co
 - ```<p>``` is **paragraph** tag, defines the **paragraph**.
 - ```<!-- comments here -->``` is **comment** tag, the content in this tag would not affect the content of the webpage.
 
-## Common Used HTML Tags
+## Common Used \coloredtext{CornflowerBlue}{HTML} Tags
 \label{sec:section1_3}
 
 Knowing that HTML documents are composed by elements (or tags), we now introduce some useful tags you might use the most in the future :
