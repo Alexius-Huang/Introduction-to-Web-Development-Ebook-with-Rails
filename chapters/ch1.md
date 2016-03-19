@@ -3,7 +3,9 @@
 
 Hello readers, welcome to the world of \coloredtext{CornflowerBlue}{Web Development!} When talking about web development, everything will be started from learning **HTML** and **CSS** syntax, which we can create **static webpages**. After that, you can use **JavaScript** with its library **jQuery** to create **dynamic webpages**, such as the *dropdown menu*, the *animation* and more!
 
-(should contain html css and js icons)
+![HTML/CSS/JavaScript icons\label{fig:captioned_image}](images/CH1/front-end.png)
+
+(Image by [http://davidmles.com/blog/frontend-technologies/](http://davidmles.com/blog/frontend-technologies/))
 
 Overall, these (HTML, CSS and JavaScript) are all associated with **\coloredtext{CornflowerBlue}{front-end}**, which are the \coloredtext{CornflowerBlue}{visable contents when you browsing webpages}. Nevermind of all these lind of terms in case you didn't know, we will gradually dig into it and learn some useful techniques.
 
@@ -37,7 +39,7 @@ Well, let's just start viewing the fundamentals of HTML, here is the basic struc
 ```
 \end{codelisting}
 
-(should contain an result image)
+![Result webpage\label{fig:captioned_image}](images/CH1/Capture1-1.png)
 
 Each line contains a pair or pairs of angle brackets, these are the basic **HTML tags** or **elements** of the HTML document. Notice that *most* of the HTML elements have starting tags and ending tags, and in order to specify the ending tag, you can see that it always contains a slash(/) sign, such as ```<html>``` and ```</html>```. (Not all of the HTML elements have both starting and ending tags.)
 
@@ -73,7 +75,7 @@ Headers are a sequence of tags from ```<h1>``` to ```<h6>```, the lower of the n
 ```
 \end{codelisting}
 
-(should contain an result image)
+![Result webpage\label{fig:captioned_image}](images/CH1/Capture1-2.png)
 
 ### Formatting
 
@@ -123,7 +125,7 @@ Example HTML document (Listing~\ref{code:html_formatting}) :
 ```
 \end{codelisting}
 
-(should contain an result image)
+![Result webpage\label{fig:captioned_image}](images/CH1/Capture1-3.png)
 
 
 ### Create Links
@@ -149,7 +151,7 @@ Create a link to the Ruby Softcover page will result as (Listing~\ref{code:html_
 ```
 \end{codelisting}
 
-(should contain an result image)
+![Result webpage\label{fig:captioned_image}](images/CH1/Capture1-4.png)
 
 ### Add Images
 
@@ -170,29 +172,32 @@ So what is the source of the image, one way is just specifiy its URL, for instan
 \label{code:html_image_1}
 ```html
 <body>
-  <img src="http://blogs.microsoft.co.il/blogs/shayf/WindowsLiveWriter/
-  GettingStartedWithDynamicLanguages_B665/ruby_logo_2.png" alt="The ruby icon">
+  <img src="http://engineering.yp.com/img/ruby-logo.png" alt="The ruby logo">
 </body>
 ```
 \end{codelisting}
 
-(should contain an result image)
+![Result webpage\label{fig:captioned_image}](images/CH1/Capture1-5.png)
 
-There is another way to add images, assume here is the folder where the "example.html" file and the image file "ruby_logo.png", they are stored (as in **should add figure**) , when the browser didn't expected to find image through the URL, it should find the image in the folder or the directory where the image was stored. In this example, the "example.html" should import the image as in Listing~\ref{code:html_image_2} :
+(You may want to know how to resize images, this will be introduced in the next chapter.)
 
-(should contain the directory image)
+There is another way to add images, assume here is the folder where the "example.html" file and the image file "ruby-logo.png", they are stored (as in **should add figure**) , when the browser didn't expected to find image through the URL, it should find the image in the folder or the directory where the image was stored. In this example, the "example.html" should import the image as in Listing~\ref{code:html_image_2} :
+
+![Example directory\label{fig:captioned_image}](images/CH1/ExampleDirectory.png)
 
 \begin{codelisting}
 \codecaption{Example add image by specifying its URL.}
 \label{code:html_image_2}
 ```html
 <body>
-  <img src="/images/ruby_logo.png" alt="The ruby icon">
+  <img src="./Images/ruby-logo.png" alt="The ruby icon">
 </body>
 ```
 \end{codelisting}
 
-(should contain an result image)
+![Result webpage\label{fig:captioned_image}](images/CH1/Capture1-6.png)
+
+Notice that the source follows the path from the current directory (a dot), to the "Images" folder, and to the image file.
 
 ### Paragraphs Format
 
@@ -219,7 +224,7 @@ Here are more specifics on ```<p>``` tag, you first need to realize that it is n
 ```
 \end{codelisting}
 
-(should contain an result image)
+![Result webpage\label{fig:captioned_image}](images/CH1/Capture1-7.png)
 
 It seems like the format didn't do us the favor, so, here we introduce another HTML element called **preformatted tag**, the ```<pre>``` tag. The text inside the ```<pre>``` element is displayed in a different font (Courier mostly), and it also preserves both spaces and line breaks (Listing~\ref{code:html_paragraph_format_2}) :
 
@@ -244,7 +249,7 @@ It seems like the format didn't do us the favor, so, here we introduce another H
 ```
 \end{codelisting}
 
-(should contain an result image)
+![Result webpage\label{fig:captioned_image}](images/CH1/Capture1-8.png)
 
 Other paragraphs formatting such as the ```<br>``` tag means **line break**, for example (Listing~\ref{code:html_paragraph_format_3}) :
 
@@ -256,7 +261,7 @@ Other paragraphs formatting such as the ```<br>``` tag means **line break**, for
 ```
 \end{codelisting}
 
-(should contain an result image)
+![Result webpage\label{fig:captioned_image}](images/CH1/Capture1-9.png)
 
 The ```<hr>``` tag means **horizontal rule**, which defines a horizontal line, for example (Listing~\ref{code:html_paragraph_format_4}) :
 
@@ -270,7 +275,7 @@ The ```<hr>``` tag means **horizontal rule**, which defines a horizontal line, f
 ```
 \end{codelisting}
 
-(should contain an result image)
+![Result webpage\label{fig:captioned_image}](images/CH1/Capture1-10.png)
 
 ### Quotes
 
@@ -291,11 +296,11 @@ And now we are dealing **quotes**! First of all, to define short quotations, sim
 ```
 \end{codelisting}
 
-(should contain an result image)
+![Result webpage\label{fig:captioned_image}](images/CH1/Capture1-11.png)
 
 The quotes nested the sentence "trying to make Ruby natural, not simple". (And that is true!)
 
-But how about long quotes? There HTML prepared another tag called ```<quoteblock>```, usually by using this tag, the browser will indent the content inside the tag, for example (Listing~\ref{code:html_quotes_2}) :
+But how about long quotes? There HTML prepared another tag called ```<blockquote>```, usually by using this tag, the browser will indent the content inside the tag, for example (Listing~\ref{code:html_quotes_2}) :
 
 \begin{codelisting}
 \codecaption{Large quotes example.}
@@ -305,7 +310,7 @@ But how about long quotes? There HTML prepared another tag called ```<quoteblock
   Ruby was conceived on February 24, 1993. In a 1999 post to the ruby-talk mailing 
   list, Ruby author Yukihiro Matsumoto describes some of his early ideas about the
   language:
-  <quoteblock>
+  <blockquote>
     I was talking with my colleague about the possibility of an object-oriented
     scripting language. I knew Perl (Perl4, not Perl5), but I didn't like it really, 
     because it had the smell of a toy language (it still has). The object-oriented 
@@ -314,7 +319,7 @@ But how about long quotes? There HTML prepared another tag called ```<quoteblock
     appeared to be add-on to the language. As a language maniac and OO fan for 
     15 years, I really wanted a genuine object-oriented, easy-to-use scripting 
     language. I looked for but couldn't find one. So I decided to make it.
-  </quoteblock>
+  </blockquote>
   <br>
   <small>Via <a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)">
   Ruby Wiki</a></small>
@@ -323,7 +328,8 @@ But how about long quotes? There HTML prepared another tag called ```<quoteblock
 ```
 \end{codelisting}
 
-(should contain an result image)
+![Result webpage\label{fig:captioned_image}](images/CH1/Capture1-12.png)
+
 
 ### Lists
 
@@ -344,15 +350,15 @@ There are two types of HTML lists, first is the unordered list, which use the ta
 ```
 \end{codelisting}
 
-(should contain an result image)
+![Result webpage\label{fig:captioned_image}](images/CH1/Capture1-13.png)
 
-Another type of list is the ordered list, which use the tag ```<ol>``` to represent, and each of the list item is also nested by ```<li>``` element, for exampke (Listing~\ref{code:html_quotes_2}) :
+Another type of list is the ordered list, which use the tag ```<ol>``` to represent, and each of the list item is also nested by ```<li>``` element, for example (Listing~\ref{code:html_quotes_2}) :
 
 \begin{codelisting}
 \codecaption{Large quotes example.}
 \label{code:html_quotes_2}
 ```html
-<h2>Step to learn Web Development :</h2>
+<h2>Steps to learn Web Development :</h2>
 <ol>
   <li>HTML</li>
   <li>CSS</li>
@@ -362,7 +368,7 @@ Another type of list is the ordered list, which use the tag ```<ol>``` to repres
 ```
 \end{codelisting}
 
-(should contain an result image)
+![Result webpage\label{fig:captioned_image}](images/CH1/Capture1-14.png)
 
 
 ### Tables
@@ -399,7 +405,7 @@ Now each table row can divided by several table data with the ```<th>``` or ```<
 ```
 \end{codelisting}
 
-(should contain an result image)
+![Result webpage\label{fig:captioned_image}](images/CH1/Capture1-15.png)
 
 Some table even have the main table caption on it, lets specify the caption of the table by using the element ```<caption>``` right after the first ```<table>``` element (Listing~\ref{code:html_table_2}) :
 
@@ -416,7 +422,7 @@ Some table even have the main table caption on it, lets specify the caption of t
 ```
 \end{codelisting}
 
-(should contain an result image)
+![Result webpage\label{fig:captioned_image}](images/CH1/Capture1-16.png)
 
 Sometime you can span more data cells into one row or one column, try spanning multiple rows in one column by using the ```rowspan``` attribute, for instance (Listing~\ref{code:html_table_3}) :
 
@@ -432,7 +438,7 @@ Sometime you can span more data cells into one row or one column, try spanning m
 ```
 \end{codelisting}
 
-(should contain an result image)
+![Result webpage\label{fig:captioned_image}](images/CH1/Capture1-17.png)
 
 Or, by using the ```colspan``` attrbuts to span multiple columns into one column (Listing~\ref{code:html_table_4}) :
 
@@ -447,7 +453,7 @@ Or, by using the ```colspan``` attrbuts to span multiple columns into one column
 ```
 \end{codelisting}
 
-(should contain an result image)
+![Result webpage\label{fig:captioned_image}](images/CH1/Capture1-18.png)
 
 ## Summery
 \label{sec:section1_4}
@@ -478,7 +484,7 @@ Here is the list of the tags and elements we've walkthrough :
 | `<br>` | Break tag | Defines new line in HTML document |
 | `<hr>` | Horizontal rule tag | Defines an horizontal line which can separate contents in HTML document|
 | `<q>` | Quote tag | Defines short quotation |
-| `<quoteblock>` | Quoteblock tag | Defines large quotation |
+| `<blockquote>` | blockquote tag | Defines large quotation |
 | `<ul>` | Unordered list tag | Defines an unordered list |
 | `<ol>` | Ordered list tag | Defines an ordered list |
 | `<li>` | List item tag | Defines a list item |
