@@ -326,12 +326,130 @@ But how about long quotes? There HTML prepared another tag called ```<quoteblock
 (should contain an result image)
 
 ### Lists
-(Content for HTML lists)
+
+There are two types of HTML lists, first is the unordered list, which use the tag ```<ul>``` to represent, each of the list item is nested by ```<li>```, for example (Listing~\ref{code:html_list_1}) :
+
+\begin{codelisting}
+\codecaption{Unordered list example.}
+\label{code:html_list_1}
+```html
+<h2>Computer Languages :</h2>
+<ul>
+  <li>C++</li>
+  <li>Java</li>
+  <li>C#</li>
+  <li>Python</li>
+  <li>Ruby</li>
+</ul>
+```
+\end{codelisting}
+
+(should contain an result image)
+
+Another type of list is the ordered list, which use the tag ```<ol>``` to represent, and each of the list item is also nested by ```<li>``` element, for exampke (Listing~\ref{code:html_quotes_2}) :
+
+\begin{codelisting}
+\codecaption{Large quotes example.}
+\label{code:html_quotes_2}
+```html
+<h2>Step to learn Web Development :</h2>
+<ol>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+  <li>PHP, SQL/ Ruby on Rails/ other Web Framework</li>
+</ol>
+```
+\end{codelisting}
+
+(should contain an result image)
+
 
 ### Tables
-(Content for HTML tables)
 
+Tables are also important format that describes the data or make the contents look well, every thing associated with the table should (obviously) nested by the ```<table>``` element. 
 
+```html
+<table>
+  <!-- Table content goes here -->
+</table>
+```
+
+By inspecting the structure of the table, table are the composed by table rows, which can be represented by the ```<tr>``` tag, lets say having three rows :
+
+```html
+<table>
+  <tr> <!-- Row 1 --> </tr>
+  <tr> <!-- Row 2 --> </tr>
+  <tr> <!-- Row 3 --> </tr>
+</table>
+```
+
+Now each table row can divided by several table data with the ```<th>``` or ```<td>``` element, ```<th>``` represents the table header whereas ```<td>``` represents the table data. Now we can construct a simple table, for instance (Listing~\ref{code:html_table_1}) :
+
+\begin{codelisting}
+\codecaption{HTML table example.}
+\label{code:html_table_1}
+```html
+<table>
+  <tr> <th>Name</th>  <th>Age</th> <th>Interest</th> </tr>
+  <tr> <td>Max</td>   <td>20</td>  <td>Drawing</td>  </tr>
+  <tr> <td>Allen</td> <td>18</td>  <td>Reading</td>  </tr>
+</table>
+```
+\end{codelisting}
+
+(should contain an result image)
+
+Some table even have the main table caption on it, lets specify the caption of the table by using the element ```<caption>``` right after the first ```<table>``` element (Listing~\ref{code:html_table_2}) :
+
+\begin{codelisting}
+\codecaption{HTML table with a caption example.}
+\label{code:html_table_2}
+```html
+<table>
+  <caption>Info of the Students</caption>
+  <tr> <th>Name</th>  <th>Age</th> <th>Interest</th> </tr>
+  <tr> <td>Max</td>   <td>20</td>  <td>Drawing</td>  </tr>
+  <tr> <td>Allen</td> <td>18</td>  <td>Reading</td>  </tr>
+</table>
+```
+\end{codelisting}
+
+(should contain an result image)
+
+Sometime you can span more data cells into one row or one column, try spanning multiple rows in one column by using the ```rowspan``` attribute, for instance (Listing~\ref{code:html_table_3}) :
+
+\begin{codelisting}
+\codecaption{HTML table rowspan example.}
+\label{code:html_table_3}
+```html
+<table>
+  <tr> <th>Name</th>              <td>Max</td>                  </tr>
+  <tr> <td rowspan="2">Email</td> <td>example@gmail.com</td>    </tr>
+  <tr>                            <td>example@yahoo.com.tw</td> </tr>
+</table>
+```
+\end{codelisting}
+
+(should contain an result image)
+
+Or, by using the ```colspan``` attrbuts to span multiple columns into one column (Listing~\ref{code:html_table_4}) :
+
+\begin{codelisting}
+\codecaption{HTML table colspan example.}
+\label{code:html_table_4}
+```html
+<table>
+  <tr> <th>Name</th> <th colspan="2">Email</th>                                </tr>
+  <tr> <td>Max</td>  <td>example@gmail.com</td>  <td>example@yahoo.com.tw</td> </tr>
+</table>
+```
+\end{codelisting}
+
+(should contain an result image)
+
+We covered most common used HTML elements in this book, but for more informations of the HTML elements, you can search the [W3School website](http://www.w3schools.com/html/default.asp) : http://www.w3schools.com/html/default.asp
 
 
 
