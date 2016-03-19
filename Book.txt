@@ -5,6 +5,6 @@ tableofcontents
 preface.md
 mainmatter:
 ch1.md
+ch2.md
+ch3.md
 a_chapter.md
-another_chapter.md
-yet_another_chapter.md

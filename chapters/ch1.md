@@ -449,8 +449,50 @@ Or, by using the ```colspan``` attrbuts to span multiple columns into one column
 
 (should contain an result image)
 
-We covered most common used HTML elements in this book, but for more informations of the HTML elements, you can search the [W3School website](http://www.w3schools.com/html/default.asp) : http://www.w3schools.com/html/default.asp
+## Summery
+\label{sec:section1_4}
 
+Here is the list of the tags and elements we've walkthrough :
+
+|**HTML Tag** | **Name** | **Description** |
+| `<!DOCTYPE>` | Declaration tag | Declare the document type |
+| `<html>` | HTML tag | Defines the HTML document |
+| `<head>` | Head tag | Provides more information of the HTML document |
+| `<body>` | Body tag | Provides visible webpage contents |
+| `<h1>` ~ `<h6>` | Header tags | Defines the header of the document |
+| `<!-- -->` | Comment tag | Explanation of the document |
+| `<p>` | Paragraph tag | Describes the HTML paragraph |
+| `<b>`| Bold tag | Display bolded text |
+| `<strong>`| Strong tag | Display bolded text semantically **strong** |
+| `<i>` | Italic tag | Display the italic text |
+| `<em>` | Emphsizing tag| Display the italic text semantically *emphasized* |
+| `<sub>` | Subscript tag | Display the subscripted text |
+| `<sup>` | Superscript tag| Display the superscripted text |
+| `<small>` | Small tag | Display relatively small text |
+| `<mark>` | Mark tag | Display the marked text |
+| `<del>` | Delete tag | Display the deleted text |
+| `<ins>` | Insert tag | Display the inserted text |
+| `<a>` | Anchor tag | Create an hyper referenced link |
+| `<img>` | Image tag | Add images in the HTML document |
+| `<pre>` | Preformatted tag | Display paragraphs which preserves both whitespaces and line breaks|
+| `<br>` | Break tag | Defines new line in HTML document |
+| `<hr>` | Horizontal rule tag | Defines an horizontal line which can separate contents in HTML document|
+| `<q>` | Quote tag | Defines short quotation |
+| `<quoteblock>` | Quoteblock tag | Defines large quotation |
+| `<ul>` | Unordered list tag | Defines an unordered list |
+| `<ol>` | Ordered list tag | Defines an ordered list |
+| `<li>` | List item tag | Defines a list item |
+| `<table>` | Table tag | Specified the table content in HTML document |
+| `<tr>` | Table row tag | Defines a row in the HTML table content |
+| `<th>` | Table header tag | Defines a table header cell in the HTML table row content |
+| `<td>` | Table data tag | Defines a table data cell in the HTML table row content |
+| `<caption>` | Table caption tag | Defines the caption of the HTML table |
+
+We covered most common used HTML elements in this book, however we havn't introduce some other important HTML tags or elements such as ```<div>``` or ```<form>``` tags, but nevermind, these will appear as we processs into the later chapters, all we recommend you to do is to familierize how to use the common HTML tags in order to prepare for Chapter~\ref{cha:ch3}.
+
+And we also congratulate that you known the basic structure of the HTML elments and we are gonna proceed to learn how to style our HTML tags by using **\coloredtext{LightGreen}{CSS}**!
+
+For more informations of the HTML elements, you can search the [W3School website](http://www.w3schools.com/html/default.asp) : http://www.w3schools.com/html/default.asp
 
 
 
