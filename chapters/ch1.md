@@ -499,38 +499,3 @@ We covered most common used HTML elements in this book, however we havn't introd
 And we also congratulate that you known the basic structure of the HTML elments and we are gonna proceed to learn how to style our HTML tags by using **\coloredtext{LightGreen}{CSS}**!
 
 For more informations of the HTML elements, you can search the [W3School website](http://www.w3schools.com/html/default.asp) : http://www.w3schools.com/html/default.asp
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

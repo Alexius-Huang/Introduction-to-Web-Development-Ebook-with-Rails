@@ -29,7 +29,7 @@ Inline CSS styling is the most simple way to add the style, you just simply assi
 ```
 \end{codelisting}
 
-(Should display result image)
+![Result webpage\label{fig:captioned_image}](images/CH2/Capture2-1.png)
 
 You can see that the value of the style attribute is :
 
@@ -73,7 +73,7 @@ Internal CSS styling means not to directly apply the CSS property to specific HT
 ```
 \end{codelisting}
 
-(Should display result image)
+![Result webpage\label{fig:captioned_image}](images/CH2/Capture2-2.png)
 
 By inspecting one CSS code block :
 
@@ -124,20 +124,24 @@ Now, to show you how separating the HTML and CSS works, lets just create an "exa
 ```
 \end{codelisting}
 
-(Should display result image)
+And now, in the same directory, let's create another file called "example.css", please remember to add the ".css" prefix in order to specify that it is a kind of CSS file. 
 
-And now, in the same directory, let's create another file called "example.css", please remember to add the ".css" prefix in order to specify that it is a kind of CSS file, now we can edit the file now (Listing~\ref{code:css_syntax_4}) :
+This should be the current state of your folder :
+
+![Result webpage\label{fig:captioned_image}](images/CH2/Capture2-3.png)
+
+Now we can edit the file now (Listing~\ref{code:css_syntax_4}) :
 
 \begin{codelisting}
 \codecaption{External CSS file content.}
 \label{code:css_syntax_4}
 ```css
 p {
-  color: blue;
-  background-color: yellow;
+  color: white;
+  background-color: green;
 }
 h1 {
-  color: red;
+  color: blue;
 }
 ```
 \end{codelisting}
@@ -169,7 +173,7 @@ Notice that `<link>` tag is a kind of single tag and should be placed between th
 ```
 \end{codelisting}
 
-(Should display result image)
+![Result webpage\label{fig:captioned_image}](images/CH2/Capture2-4.png)
 
 And now, you will have your style appended in the HTML file by including the CSS file.
 
@@ -217,7 +221,7 @@ You can override this rule by using the internal styling or inline styling :
 </html>
 ```
 
-(Should display result image)
+![Result webpage\label{fig:captioned_image}](images/CH2/Capture2-5.png)
 
 ## Common Used \coloredtext{LightGreen}{CSS} Selectors
 \label{sec:section2_3}
@@ -255,7 +259,7 @@ Notice that every CSS comments are nested by `/* */`. By apply the styling liste
 ```
 \end{codelisting}
 
-(Should display result image)
+![Result webpage\label{fig:captioned_image}](images/CH2/Capture2-6.png)
 
 You can also select multiple elements directly with the same style by separating the seletors by commas.
 
@@ -280,7 +284,7 @@ Applying the CSS listed above with the HTML file (Listing~\ref{code:css_selector
 ```
 \end{codelisting}
 
-(Should display result image)
+![Result webpage\label{fig:captioned_image}](images/CH2/Capture2-7.png)
 
 ### ID Selectors
 
@@ -316,7 +320,7 @@ p { color: red; }
 ```
 \end{codelisting}
 
-(Should display result image)
+![Result webpage\label{fig:captioned_image}](images/CH2/Capture2-8.png)
 
 ### Class Selectors
 
@@ -355,7 +359,7 @@ p { color: red; }
 ```
 \end{codelisting}
 
-(Should display result image)
+![Result webpage\label{fig:captioned_image}](images/CH2/Capture2-9.png)
 
 How about we want all the `<p>` elements with class "example" and the `<h1>` element with the class "example" display different color? You can try this syntax to specify specific tags following with the class selector syntax :
 
@@ -375,7 +379,7 @@ h1.example { color: green; }
 ```
 \end{codelisting}
 
-(Should display result image)
+![Result webpage\label{fig:captioned_image}](images/CH2/Capture2-10.png)
 
 ### Sub-Element Selector
 
@@ -417,7 +421,7 @@ So, in order to satisfy the condition that described above, we can append the CS
 ```
 \end{codelisting}
 
-(Should display result image)
+![Result webpage\label{fig:captioned_image}](images/CH2/Capture2-11.png)
 
 ## \coloredtext{CornflowerBlue}{HTML} Block & Inline Elements
 \label{sec:section2_4}
@@ -445,7 +449,7 @@ The **block level** elements started on a new line and stretches up the full wid
 h1, p { border: 2px solid green; }
 ```
 
-(Should display result image)
+![Result webpage\label{fig:captioned_image}](images/CH2/Capture2-12.png)
 
 (We will learn more details about border after several sections.) You can clearly see that the block element takes as full width of the page.
 
@@ -469,7 +473,7 @@ The **inline level** element doesn't started on a new line, however it only take
 a { border: 2px solid green; }
 ```
 
-(Should display result image)
+![Result webpage\label{fig:captioned_image}](images/CH2/Capture2-13.png)
 
 You can see that the `<a>` element didn't start with a new line and the border only group the content of the `<a>` element.
 
@@ -487,14 +491,14 @@ The `<div>` element often used as a **container** for other HTML elements, it is
   <div id="taiwan"> <!-- This is the container with ID named 'taiwan' -->
     <h3>Taiwan</h3>
     <p>
-      Taiwan (Chinese: 臺灣 or 台灣), officially the Republic of China (ROC; Chinese:
-      中華民國), is a sovereign state in East Asia. The Republic of China, originally
-      based in mainland China, has since 1945 governed the island of Taiwan, which
-      constitutes more than 99% of its territory, as well as Penghu, Kinmen, Matsu,
-      and other minor islands, following its loss of the mainland China territory 
-      in 1949 in the Chinese Civil War. This remaining area is also constitutionally
-      called the "Free area of the Republic of China" which is not ruled by the
-      Communist Party of China in Beijing.
+      Taiwan, officially the Republic of China, is a sovereign state in East Asia. 
+      The Republic of China, originally based in mainland China, has since 1945 
+      governed the island of Taiwan, which constitutes more than 99% of its 
+      territory, as well as Penghu, Kinmen, Matsu, and other minor islands,
+      following its loss of the mainland China territory in 1949 in the Chinese 
+      Civil War. This remaining area is also constitutionally called the "Free 
+      area of the Republic of China" which is not ruled by the Communist Party 
+      of China in Beijing.
     </p>
   </div>
 </body>
@@ -512,7 +516,7 @@ The `<div>` element often used as a **container** for other HTML elements, it is
 #taiwan p { font-family: helvetica; }
 ```
 
-(Should display result image)
+![Result webpage\label{fig:captioned_image}](images/CH2/Capture2-14.png)
 
 Sometimes we want some specific content inside an element display different style, then we can make use of the `<span>` tag, this time we change color of some text in the paragraph showed in the previous example, using the `<span>` tag with the same class (Listing~\ref{code:html_display_4}) :
 
@@ -524,15 +528,15 @@ Sometimes we want some specific content inside an element display different styl
   <div id="taiwan"> <!-- This is the container with ID named 'taiwan' -->
     <h3>Taiwan</h3>
     <p>
-      <span class="yellow">Taiwan (Chinese: 臺灣 or 台灣)</span>, officially the 
-      Republic of China (ROC; Chinese: 中華民國), is a <span class="yellow">
-      sovereign state in East Asia</span>. The Republic of China, originally
-      based in mainland China, has since 1945 governed the island of Taiwan, which
-      constitutes more than 99% of its territory, as well as Penghu, Kinmen, Matsu,
-      and other minor islands, following its loss of the mainland China territory 
-      in 1949 in the Chinese Civil War. This remaining area is also constitutionally
-      called the <span class="yellow">"Free area of the Republic of China"</span> 
-      which is not ruled by the Communist Party of China in Beijing.
+      <span class="yellow">Taiwan</span>, officially the Republic of China, is a 
+      <span class="yellow">sovereign state in East Asia</span>. The Republic of 
+      China, originally based in mainland China, has since 1945 governed the island 
+      of Taiwan, which constitutes more than 99% of its territory, as well as 
+      Penghu, Kinmen, Matsu, and other minor islands, following its loss of the 
+      mainland China territory in 1949 in the Chinese Civil War. This remaining area 
+      is also constitutionally called the <span class="yellow">"Free area of the 
+      Republic of China"</span> which is not ruled by the Communist Party of China 
+      in Beijing.
     </p>
   </div>
 </body>
@@ -551,7 +555,7 @@ Sometimes we want some specific content inside an element display different styl
 span.yellow { color: yellow; }
 ```
 
-(Should display result image)
+![Result webpage\label{fig:captioned_image}](images/CH2/Capture2-15.png)
 
 Now, we have shown you from selecting the element to grouping the element to style, we are nearly approaching to introduce the styling properties you can apply. However, there is one more concept to prepare and you can finally make good use of these knowledges.
 
@@ -568,7 +572,7 @@ This section will help you build the basic concept about the fundamentals of des
 
 **Padding** the the transparent part that **clears the area between the border and the content**. **Margin** is also the transparent part but **clears the area between the HTML elements**.
 
-### Illustrate the Design Process with Concept of Box Model
+### Layout Process Example
 
 Let's view the example below, suppose we want to style the HTML document below (Listing~\ref{code:html_box_model_1}) :
 
@@ -579,7 +583,7 @@ Let's view the example below, suppose we want to style the HTML document below (
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Ruby Lang Layout Example</title>
+  <title>Ruby Lang Layout Example</title>
 </head>
 <body>
   <h1>Ruby Lang</h1>
@@ -596,25 +600,163 @@ Let's view the example below, suppose we want to style the HTML document below (
 ```
 \end{codelisting}
 
-(Should display result image)
+![Result webpage\label{fig:captioned_image}](images/CH2/Capture2-16.png)
 
+We will make use of the knowledge we learned from Section~\ref{sec:section2_2}, Section~\ref{sec:section2_3} and Section~\ref{sec:section2_4}. First of all, let's add some `<div>` or `<span>` tags in order to separate the content and then we can apply styles differently. (Listing~\ref{code:html_box_model_2})
 
+\begin{codelisting}
+\codecaption{Separate contents by `<div>` or `<span>` element.}
+\label{code:html_box_model_2}
+```html
+<body>
+  <div class="container">
+    <div id="ruby-lang-paragraph">
+      <h1>Ruby Lang</h1>
+      <img src="https://elixirgraphics.com/previews/Ruby/rw_common/images/ruby_logo
+      _3a.png" alt="ruby-logo">
+      <p><span class="highlight">Ruby</span> is a <span class="highlight">dynamic,
+      reflective, object-oriented, general-purpose programming language</span>. It 
+      was designed and developed in the mid-1990s by <span class="highlight">
+      Yukihiro "Matz" Matsumoto</span> in Japan.</p>
+    </div>
+    <div id="links">
+      <a href="https://www.ruby-lang.org/en/">Official Website!</a>
+      <a href="http://tryruby.org/levels/1/challenges/0">Try Ruby!</a>
+      <a href="https://rubymonk.com">Ruby Monk!</a>
+    </div>
+  </div>
+</body>
+```
+\end{codelisting}
 
+And now we can append CSS on the page! Start with the whole "container" part (You will learn the CSS properties in the next chapter) (Listing~\ref{code:html_box_model_3}) :
 
+\begin{codelisting}
+\codecaption{Style the container class.}
+\label{code:html_box_model_3}
+```css
+div.container { 
+  background-color: #f0ccde; 
+  border: 10px groove #f7e5ee;
+}
+```
+\end{codelisting}
 
+It should look like this :
 
+![Result webpage\label{fig:captioned_image}](images/CH2/Capture2-17.png)
 
+You can see that the background is styled with the pink color, and the border is surrounding the content, but it seems that the content sticks the border, we should *clear the space between the content and the border*, that's how **padding** serve our needs!
 
+Add the CSS padding property (Listing~\ref{code:html_box_model_3}) :
 
+\begin{codelisting}
+\codecaption{Use the padding property in the cotainer class.}
+\label{code:html_box_model_3}
+```css
+div.container { 
+  background-color: #f0ccde; 
+  border: 10px groove #f7e5ee;
+  padding: 15px;
+}
+```
+\end{codelisting}
 
+The layout of the container looks good :
 
+![Result webpage\label{fig:captioned_image}](images/CH2/Capture2-18.png)
 
+Now we start to style the inner part, start with the `<div>` part with and `id` attribute named `ruby-lang-paragraph` (Listing~\ref{code:html_box_model_4}) :
 
+\begin{codelisting}
+\codecaption{Add more CSS properties in the "ruby-lang-paragraph" id part.}
+\label{code:html_box_model_4}
+```css
+#ruby-lang-paragraph {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #a50052;
+}
+#ruby-lang-paragraph h1 { text-align: center; }
+#ruby-lang-paragraph img { display: block; margin: 0 auto; }
+span.highlight { color: #8b80b2; }
+```
+\end{codelisting}
 
+Well, I like the pink theme :
 
+![Result webpage\label{fig:captioned_image}](images/CH2/Capture2-19.png)
 
+Finally, let us style the link part (Listing~\ref{code:html_box_model_5}) :
 
+\begin{codelisting}
+\codecaption{Add more CSS properties in the "links" id part.}
+\label{code:html_box_model_5}
+```css
+#links a {
+  font-family: Helvetica;
+  background-color: #b8005c;
+  color: white;
+  text-decoration: none;
+  border: 2px solid #f7e5ee;
+  padding: 5px;
+  border-radius: 3px;
+}
+#links a:hover {
+  background-color: white;
+  color: #b8005c;
+}
+```
+\end{codelisting}
 
+This is how it will display, try **hover** the link and it will change into another style (Just like in the style in the middle button. The special selector `a:hover` uses `CSS pseudo class`,which we will introduce briefly in the next chapter.):
 
+![Result webpage\label{fig:captioned_image}](images/CH2/Capture2-20.png)
 
+But the links, however, seems stick too close, so we might think that we need to **clear a space between the links (or the `<a>` elements)**, then recall that the margin from CSS box model can clear the area between elements, let's add this property (Listing~\ref{code:html_box_model_6}) :
 
+\begin{codelisting}
+\codecaption{Add more CSS properties in the "links" id part.}
+\label{code:html_box_model_6}
+```css
+#links a {
+  font-family: Helvetica;
+  background-color: #b8005c;
+  color: white;
+  text-decoration: none;
+  border: 2px solid #f7e5ee;
+  padding: 5px;
+  border-radius: 3px;
+
+  margin: 5px;
+}
+#links a:hover {
+  background-color: white;
+  color: #b8005c;
+}
+```
+\end{codelisting}
+
+Then the buttons are separated in moderate width :
+
+![Result webpage\label{fig:captioned_image}](images/CH2/Capture2-21.png)
+
+This is how the web page styled with CSS, maybe there are so many CSS properties you havn't known yet, but we will walkthrough them in the next chapter!
+
+## Summery
+\label{sec:section2_6}
+
+In this chapter we talked about the fundamental structure of CSS and the basic syntax of CSS (Section~\ref{sec:section2_2}), we also shown that there are three ways to add CSS into HTML documents :
+
+- **Inline CSS**
+- **Internal CSS**
+- **External CSS**
+
+with the former one (inline CSS) has the highest priority and the latter one has the lowest priority (external CSS). We also discussed the benefit of using different type of importing CSS into the HTML documents.
+
+CSS syntax contains **CSS selectors** (Section~\ref{sec:section2_3}) which can select the elements to apply the styles, and the **CSS properties** with **CSS values** to provide the imformation to describe the layout type of the HTML elements.
+
+Moreover, we introduced the **display type of the HTML elements** (Section~\ref{sec:section2_4}) that can catagorized into the **block level** or the **inline level** element. By making good use of the `<div>` and the `<span>` elements, you are able to arrange the content and the style more easily and logically.
+
+Last but not least, we introduced the most important topic in Section~\ref{sec:section2_5}, which is the **CSS box model**, it can help you arrange and layout the content more readable and clear. And we also demonstrate the CSS layout process in the same section, in order to let you know how **box model** works on styling webpages.
+
+In the next chapter, you are going to use the knowledge of the CSS basics to learn the CSS properties, the next chapter is going to be fun that we will discover more on different types of styling with CSS!
