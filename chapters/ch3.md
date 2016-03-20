@@ -1,2 +1,2 @@
-# Packing Up with HTML and CSS
+# Explore \coloredtext{LightGreen}{CSS} Properties
 \label{cha:ch3}

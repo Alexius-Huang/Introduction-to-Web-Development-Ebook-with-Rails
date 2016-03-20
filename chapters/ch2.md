@@ -419,27 +419,184 @@ So, in order to satisfy the condition that described above, we can append the CS
 
 (Should display result image)
 
-## \coloredtext{CornflowerBlue}{HTML} Block & Inline
+## \coloredtext{CornflowerBlue}{HTML} Block & Inline Elements
 \label{sec:section2_4}
 
+Now we learned how to use selectors to arrange the styles where the element we wanted to apply to, but that isn't enough, because, sometimes we want "a group" of element, or "a
+piece of element" to apply CSS, but first, we will introduce the display type of the HTML element.
 
+### Block Level Elements
 
+The **block level** elements started on a new line and stretches up the full width of the page as far as possible. Common block level element are the `<p>` and `<h1>` ~ `<h6>` header tags, to verify its display property, we use the border to see how the block element displayed (Listing~\ref{code:html_display_1}) :
 
+\begin{codelisting}
+\codecaption{Display type of the block element.}
+\label{code:html_display_1}
+```html
+<body>
+  <h1>This is the header</h1>
+  <hr>
+  <p>This is the paragraph</p>
+</body>
+```
+\end{codelisting}
 
+```css
+h1, p { border: 2px solid green; }
+```
 
+(Should display result image)
 
+(We will learn more details about border after several sections.) You can clearly see that the block element takes as full width of the page.
 
+### Inline Level Elements
 
+The **inline level** element doesn't started on a new line, however it only take up the width of the content. Common inline level element are the `<a>` or `<img>` tags, to verify its display property, we added the border to see how the inline element displayed (Listing~\ref{code:html_display_2}) :
 
+\begin{codelisting}
+\codecaption{Display type of the block element.}
+\label{code:html_display_2}
+```html
+<body>
+  <h1>This is the header</h1>
+  <hr>
+  <p>This is the paragraph with a <a href="#">Link</a> .</p>
+</body>
+```
+\end{codelisting}
 
+```css
+a { border: 2px solid green; }
+```
 
+(Should display result image)
 
+You can see that the `<a>` element didn't start with a new line and the border only group the content of the `<a>` element.
 
+### The `<div>` & The `<span>` Element
 
+The `<div>` and the `<span>` elements are very useful tags to arrange your HTML content, but two of them behave differently. `<div>` tag is a kind of **block level** element while `<span>` tag is a kind of **inline level** element.
 
+The `<div>` element often used as a **container** for other HTML elements, it is common to append the `class` or `id` attribute in order to style blocks of content. For example (Listing~\ref{code:html_display_3}) :
 
+\begin{codelisting}
+\codecaption{Display type of the block element.}
+\label{code:html_display_3}
+```html
+<body>
+  <div id="taiwan"> <!-- This is the container with ID named 'taiwan' -->
+    <h3>Taiwan</h3>
+    <p>
+      Taiwan (Chinese: 臺灣 or 台灣), officially the Republic of China (ROC; Chinese:
+      中華民國), is a sovereign state in East Asia. The Republic of China, originally
+      based in mainland China, has since 1945 governed the island of Taiwan, which
+      constitutes more than 99% of its territory, as well as Penghu, Kinmen, Matsu,
+      and other minor islands, following its loss of the mainland China territory 
+      in 1949 in the Chinese Civil War. This remaining area is also constitutionally
+      called the "Free area of the Republic of China" which is not ruled by the
+      Communist Party of China in Beijing.
+    </p>
+  </div>
+</body>
+```
+\end{codelisting}
 
+```css
+#taiwan {
+  background-color: #259359;
+  padding: 10px;
+  border-radius: 5px;
+}
+#taiwan h3, #taiwan p { color: white; }
+#taiwan h3 { font-family: "Times New Roman"; }
+#taiwan p { font-family: helvetica; }
+```
 
+(Should display result image)
+
+Sometimes we want some specific content inside an element display different style, then we can make use of the `<span>` tag, this time we change color of some text in the paragraph showed in the previous example, using the `<span>` tag with the same class (Listing~\ref{code:html_display_4}) :
+
+\begin{codelisting}
+\codecaption{Display type of the block element.}
+\label{code:html_display_4}
+```html
+<body>
+  <div id="taiwan"> <!-- This is the container with ID named 'taiwan' -->
+    <h3>Taiwan</h3>
+    <p>
+      <span class="yellow">Taiwan (Chinese: 臺灣 or 台灣)</span>, officially the 
+      Republic of China (ROC; Chinese: 中華民國), is a <span class="yellow">
+      sovereign state in East Asia</span>. The Republic of China, originally
+      based in mainland China, has since 1945 governed the island of Taiwan, which
+      constitutes more than 99% of its territory, as well as Penghu, Kinmen, Matsu,
+      and other minor islands, following its loss of the mainland China territory 
+      in 1949 in the Chinese Civil War. This remaining area is also constitutionally
+      called the <span class="yellow">"Free area of the Republic of China"</span> 
+      which is not ruled by the Communist Party of China in Beijing.
+    </p>
+  </div>
+</body>
+```
+\end{codelisting}
+
+```css
+#taiwan {
+  background-color: #259359;
+  padding: 10px;
+  border-radius: 5px;
+}
+#taiwan h3, #taiwan p { color: white; }
+#taiwan h3 { font-family: "Times New Roman"; }
+#taiwan p { font-family: helvetica; }
+span.yellow { color: yellow; }
+```
+
+(Should display result image)
+
+Now, we have shown you from selecting the element to grouping the element to style, we are nearly approaching to introduce the styling properties you can apply. However, there is one more concept to prepare and you can finally make good use of these knowledges.
+
+## \coloredtext{LightGreen}{CSS} Box Model
+\label{sec:section2_5}
+
+### What is the \coloredtext{LightGreen}{CSS} Box Model
+
+This section will help you build the basic concept about the fundamentals of design and layout, **all the HTML elements can be viewed as boxes**, each of them consists from inner to outer, **content**, **padding**, **border** and **margin**.
+
+![CSS Box Model.\label{figure:captioned_image}](https://daks2k3a4ib2z.cloudfront.net/55fba7ade2ae0be15df2b309/56c13fd6bf6d3281049d04ae_box-model.gif)
+
+**Content** is the visible part which contains text or images, and the other visible part is the **border**, which **surrounds the content and the padding**. (Of course you can also set the border property to be transparent)
+
+**Padding** the the transparent part that **clears the area between the border and the content**. **Margin** is also the transparent part but **clears the area between the HTML elements**.
+
+### Illustrate the Design Process with Concept of Box Model
+
+Let's view the example below, suppose we want to style the HTML document below (Listing~\ref{code:html_box_model_1}) :
+
+\begin{codelisting}
+\codecaption{Example HTML File.}
+\label{code:html_box_model_1}
+```html
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ruby Lang Layout Example</title>
+</head>
+<body>
+  <h1>Ruby Lang</h1>
+  <img src="https://elixirgraphics.com/previews/Ruby/rw_common/images/ruby_logo_3a
+  .png" alt="ruby-logo">
+  <p>Ruby is a dynamic, reflective, object-oriented, general-purpose programming
+  language. It was designed and developed in the mid-1990s by Yukihiro "Matz" 
+  Matsumoto in Japan.</p>
+  <a href="https://www.ruby-lang.org/en/">Official Website!</a>
+  <a href="http://tryruby.org/levels/1/challenges/0">Try Ruby!</a>
+  <a href="https://rubymonk.com">Ruby Monk!</a>
+</body>
+</html> 
+```
+\end{codelisting}
+
+(Should display result image)
 
 
 
