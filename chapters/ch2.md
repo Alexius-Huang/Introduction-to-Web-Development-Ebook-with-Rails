@@ -37,7 +37,7 @@ You can see that the value of the style attribute is :
 color: blue;
 ```
 
-You can see that CSS syntax is easy, specify the **CSS property** (color) with its **value** (blue), and ends with a semi-colon, you have assigned the CSS property into the HTML element.
+CSS syntax is easy, specify the **CSS property** (color) with its **value** (blue), and ends with a semi-colon, you have assigned the CSS property into the HTML element.
 
 However, what if *you have many properties to add on a simgle HTML element*? Or what if *you have hundreds or thousands of same type of elements with same CSS property*, do you really think that you should add each tag with the property inlinely? Consider the next 
 technique to add CSS with your HTML document.
@@ -194,7 +194,7 @@ p {
   color: red;
 }
 h1 {
-	color: blue;
+  color: blue;
 }
 ```
 
