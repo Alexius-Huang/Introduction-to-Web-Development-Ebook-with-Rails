@@ -381,7 +381,7 @@ h1.example { color: green; }
 
 ![Result webpage\label{fig:captioned_image}](images/CH2/Capture2-10.png)
 
-### Sub-Element Selector
+### Descendent Selector
 
 Sometimes we want to style specific element which is nested by another kind element, such as the example HTML file below (Listing~\ref{code:css_selector_8}) :
 
@@ -404,10 +404,10 @@ Sometimes we want to style specific element which is nested by another kind elem
 ```
 \end{codelisting}
 
-We want all the `<li>` elements that nested by the `<ul>` with different `id` styled with different color, the syntax of selecting the inner element or sub-element is :
+We want all the `<li>` elements that nested by the `<ul>` with different `id` styled with different color, the syntax of selecting the inner element or descendent element is :
 
 ```css
-ELEMENT SUB-ELEMENT { CSS content }
+ELEMENT DESCENDENT-ELEMENT { CSS content }
 ```
 
 So, in order to satisfy the condition that described above, we can append the CSS content below (Listing~\ref{code:css_selector_9}) :
