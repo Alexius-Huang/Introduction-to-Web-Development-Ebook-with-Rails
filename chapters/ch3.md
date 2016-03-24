@@ -29,19 +29,19 @@ There still have **HSL** and **HSLA** color specifier, but we think it is suffic
 
 ### RGB & RGBA Values
 
-![Color Wheels\label{captioned_image}](https://gastonsanchez.files.wordpress.com/2012/08/colorwheel.png)
+![Color Wheels\label{captioned_image}](images/CH3/color_wheel.png)
 
 - Image from [https://gastonsanchez.files.wordpress.com/2012/08/colorwheel.png](https://gastonsanchez.files.wordpress.com/2012/08/colorwheel.png)
 
 We may want to discuss more about the RGB values, in the **Figure 3.1** this is the color wheel which specifies the RGB value cooresponding to the color it would look like.
 
-![RGB Shades of Grey Values Sheet\label{captioned_image}](http://www.dylanfisher.com/blog_images/hex_grayscale_001.gif)
+![RGB Shades of Grey Values Sheet\label{captioned_image}](images/CH3/shades.gof.gif)
 
 - Image from [http://www.dylanfisher.com/blog_images/hex_grayscale_001.gif](http://www.dylanfisher.com/blog_images/hex_grayscale_001.gif)
 
 In **Figure 3.2**, it shows when the each of the RGB intensity are all equals, the larger of the intensity, the brighter the color you will get.
 
-![RGBA in CSS3\label{captioned_image}](http://fellowtuts.com/wp-content/uploads/sites/3/2014/03/what-is-rgba-in-css.png)
+![RGBA in CSS3\label{captioned_image}](images/CH3/rgba.png)
 
 - Image from [http://fellowtuts.com/wp-content/uploads/sites/3/2014/03/what-is-rgba-in-css.png](http://fellowtuts.com/wp-content/uploads/sites/3/2014/03/what-is-rgba-in-css.png)
 
@@ -95,6 +95,7 @@ But for the reminder, the `opacity` property **changes the entire opacity of the
 ## \coloredtext{LightGreen}{CSS} Backgrounds
 \label{sec:section3_2}
 
+
 ## \coloredtext{LightGreen}{CSS} Box Model Properties
 \label{sec:section3_3}
 
@@ -123,6 +124,7 @@ But for the reminder, the `opacity` property **changes the entire opacity of the
 ### \coloredtext{LightGreen}{CSS} Style Tables
 
 ## \coloredtext{LightGreen}{CSS} Layout
+\label{sec:section3_5}
 
 ### \coloredtext{LightGreen}{CSS} Display
 
@@ -131,11 +133,6 @@ But for the reminder, the `opacity` property **changes the entire opacity of the
 ### \coloredtext{LightGreen}{CSS} Float and Clear
 
 ### \coloredtext{LightGreen}{CSS} Alignment
-
-
-
-
-
 
 
 
