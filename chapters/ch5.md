@@ -556,9 +556,269 @@ More details of the JavaScript object will be presented in later sections.
 
 ### Arithmetic Operators
 
+You can use JavaScript to do some arithmetics, here's an example (Listing~\ref{code:js_operator_1}) :
+
+\begin{codelisting}
+\codecaption{Basic arithmetics.}
+\label{code:js_operator_1}
+```js
+var x = 4;
+
+// Sum
+2 + 2; // => 4
+3 + x; // => 7
+
+// Subtraction
+5 - 3; // => 2
+x - 8; // => -4
+
+// Multiplication
+4 * 6; // => 24
+x * 9; // => 36
+
+// Division
+7 / 3; // => 2.3333333333333335
+5 / x; // => 1.25
+
+// Modulus
+7 % 3; // => 1
+5 % x; // => 1
+```
+\end{codelisting}
+
+These operators which associated with calculation are called **arithmetic operators**, such as `+`, `-`, `*`, `/` and `%`. But the value that associated with calculation, such as `2 + 4`, which the numbers `2` and `4` are called the **operands**.
+
+There are also common used operators, the **increment** and the **decrement** operator, which add 1 (increments) or minus 1 (decrements) the number, for example (Listing~\ref{code:js_operator_2}) :
+
+\begin{codelisting}
+\codecaption{Increment and decrement.}
+\label{code:js_operator_2}
+```js
+// Increment
+var x = 4;
+x++;
+x;
+// => 5
+
+// Decrement
+var y = 7;
+y--;
+y;
+// => 6
+```
+\end{codelisting} 
+
+**Operator precedence** describes the order of the calculation, the multiplication, the division and modulus operators is prior to the addition and the subtraction operators. If the precedence is the same, then it will compute from left to right. For example (Listing~\ref{code:js_operator_3}) :
+
+\begin{codelisting}
+\codecaption{Operator precedence.}
+\label{code:js_operator_3}
+```js
+var x = 2 + 3 * 4;
+// x = 2 + 12 = 14
+
+var y = 12 % 5 * 8 / 3;
+// y = 2 * 8 / 3 = 16 / 3 = 5.333333333333333
+```
+\end{codelisting}
+
+By using parantheses, you can change the order of the computation (Listing~\ref{code:js_operator_4}) :
+
+\begin{codelisting}
+\codecaption{Operator precedence changed by parantheses.}
+\label{code:js_operator_4}
+```js
+var x = (3 + 5) * (8 / 2);
+// x = 8 * 4 = 32
+
+var y = 5 * (8 + (7 - 3 * 2));
+// y = 5 * (8 + 1) = 5 * 9 = 45
+```
+\end{codelisting}
+
 ### Assignment Operators
 
-### Logical Operators
+**Assignment operators** is used to assign values to the variable, so the most common assignment operator is the single equal sign (`=`) which can assign any kind of data in the variable (Listing~\ref{code:js_operator_5}) :
+
+\begin{codelisting}
+\codecaption{Assignment operator.}
+\label{code:js_operator_5}
+```js
+// Assign a string value
+var s = "Hello! It is a string.";
+
+// Assign a number value
+var n = 1234567890;
+
+// Assign a boolean value
+var b = true;
+
+// Assign an array
+var arr = [123, "Array", false, undefined, nil];
+
+// Assign an object
+var person = {
+  name:     "Max",
+  age:      20,
+  nation:   "Taiwan",
+  is_adult: true
+}
+```
+\end{codelisting}
+
+Sometimes we can simplify the process of computation such as `x = x + 3` or `y = y * 9` into an expression with a simple assignment operator, take a look at the example (Listing~\ref{code:js_operator_6}) :
+
+\begin{codelisting}
+\codecaption{Assignment operator.}
+\label{code:js_operator_6}
+```js
+var x = 5;
+
+// The += operator adds a value to the variable
+x += 10; // x = x + 10 = 5 + 10 = 15
+
+// The -= operator subtracts a value to the variable
+x -= 7;  // x = x - 7 = 15 - 7 = 8
+
+// The *= operator multiplies a value to the variable
+x *= 6;  // x = x * 6 = 8 * 6 = 48
+
+// The /= operator divides a value to the variable
+x /= 4;  // x = x / 4 = 48 / 4 = 12
+
+// The %= operator assigns the remainder to the variable
+x %= 5;  // x = x % 5 = 12 % 5 = 2 
+```
+\end{codelisting}
+
+### Comparison & Logical Operators
+
+**Comparison operators** are associated with the comparison between two values, here's an example below (Listing~\ref{code:js_operator_7}) :
+
+\begin{codelisting}
+\codecaption{Comparison operators.}
+\label{code:js_operator_7}
+```js
+var x = 10;
+
+// "Greater than" operator
+x > 5;    // => true
+x > 15;   // => false
+x > 10;   // => false
+
+// "Smaller than" operator
+x < 5;    // => false
+x < 15;   // => true
+x < 10;   // => false
+
+// "Greater than or equal to" operator
+x >= 5;   // => true
+x >= 15;  // => false
+x >= 10;  // => true
+
+// "Smaller than or equal to" operator
+x <= 5;   // => false
+x <= 15;  // => true
+x <= 10;  // => true
+
+// "Equal to" operator
+x == 5;   // => false
+x == 15;  // => false
+x == 10;  // => true
+
+// "Not equal to" operator
+x != 5;   // => true
+x != 15;  // => true
+x != 10;  // => false
+```
+\end{codelisting}
+
+However, there are some more features in JavaScript comparison operators, even if it isn't the same type, such as the number and the string value, it can also be compared, for example (Listing~\ref{code:js_operator_8}) :
+
+\begin{codelisting}
+\codecaption{Comparison operator with different data types.}
+\label{code:js_operator_8}
+```js
+var x = 10;
+
+// "Equal to" operator => Same value
+x == 10;    // => true
+x == "10";  // => true
+
+// "Equal to and same type" operator => Same value with same type
+x === 10;   // => true
+x === "10"; // => false
+
+// "Not equal to" operator => Not the same value
+x != 10;    // => false
+x != "10";  // => false
+
+// "Not equal to or not the same type" operator 
+// => Not the same value or not the same type
+x !== 10;   // => false
+x !== "10"; // => true
+```
+\end{codelisting}
+
+**Logical operator** determines the logic between the variables and the values. It used to combine with the comparison operator, for example (Listing~\ref{code:js_operator_9}) :
+
+\begin{codelisting}
+\codecaption{Logical operator.}
+\label{code:js_operator_9}
+```js
+var x = 5;
+var y = 10;
+
+// The AND (&&) operator
+(x < 10) && (20 >= y);   // => true  AND true  -> true 
+(x < 10) && (20 <= y);   // => true  AND false -> false
+(x > 10) && (20 >= y);   // => false AND true  -> false
+(x > 10) && (20 <= y);   // => false AND false -> false
+
+// The OR (||) operator
+(x < 10) || (20 >= y);   // => true  OR true   -> true 
+(x < 10) || (20 <= y);   // => true  OR false  -> true
+(x > 10) || (20 >= y);   // => false OR true   -> true
+(x > 10) || (20 <= y);   // => false OR false  -> false
+
+// The NOT (!) operator
+!(x == y); // !(false) -> true
+!(x != y); // !(true)  -> false
+```
+\end{codelisting}
+
+It is obviously that the **AND** (`&&`) operator result `true` when both or more conditions are `true` :
+
+```js
+(true) && (100 > 1) && ((5 * 6) >= (30 - 4)); // => true AND true AND true -> true
+```
+
+If one of the condition is `false`, then the result of the **AND** operator is `false` :
+
+```js
+(true) && (5 < 10) && ((5 * 6) >= (30 - 4)); // => true AND false AND true -> false
+```
+
+For the **OR** (`||`) operator, if one of the condition is `true` then the result is `true`, such as:
+
+```js
+(false) || (1 + 2 == 3) || (60 % 5 > 0); // => false OR true OR false -> true
+```
+
+If all of the conditions are `false`, then the result of the **OR** operator is `false` :
+
+```js
+(false) || (1 + 2 != 3) || (60 % 5 > 0); // => false OR false OR false -> false
+```
+
+The `NOT` operator **reverse** the boolean value of the condition :
+
+```js
+!(false); // => true
+!(true);  // => false
+```
+
+The usage of the **comparison operators** and the **logical operators** are important, it is used in the conditional and the looping statement, which will be discussed in the next section.
 
 ## \coloredtext{Orange}{JavaScript} Conditional Statements
 \label{sec:section5_4}
